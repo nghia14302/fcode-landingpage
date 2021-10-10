@@ -1,7 +1,9 @@
 import React from 'react';
 
+import Activities from './container/activities';
+
 function App() {
-    return;
+    return <Activities></Activities>;
 }
 
 export default App;
