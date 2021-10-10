@@ -1,1 +1,3 @@
-import style from 'styled-components';
+import styled from 'styled-components';
+
+export const sectionWrapper = styled.div``;

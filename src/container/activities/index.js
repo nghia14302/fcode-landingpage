@@ -1,9 +1,17 @@
 import React from 'react';
 
-import './style';
+// import NavBar from '../../component/navbar';
+// import Footer from '../../component/footer';
+import { sectionWrapper } from './style';
 
 function Activities() {
-    return;
+    return (
+        <sectionWrapper>
+            {/* <NavBar /> */}
+
+            {/* <Footer /> */}
+        </sectionWrapper>
+    );
 }
 
 export default Activities;
