@@ -1,11 +1,31 @@
 import styled from 'styled-components';
 
 import arrows from '../../../assets/components';
+import { Content } from '../style';
+
+export const Activities = styled.div`
+    max-width: 100%;
+    height: 80%;
+`;
+
+export const SliderContent = styled(Content)``;
+
+export const SubTitle = styled.h6`
+    display: block;
+    font-family: 'Roboto', 'sans-serif';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.25rem;
+    line-height: 42px;
+    letter-spacing: 1.25px;
+    margin-bottom: 62px;
+`;
 
 export const SliderContainer = styled.div`
+    position: relative;
     width: 100%;
     height: 405px;
-    overflow: visible;
+    margin-bottom: 2.31rem;
 `;
 
 export const Item = styled.div`
@@ -60,5 +80,50 @@ export const RightArrow = styled(SlideArrow)`
         background: url(${arrows['right-arrow.svg']});
         background-repeat: no-repeat;
         background-size: stretch;
+    }
+`;
+
+export const MoreInfo = styled.a`
+    position: relative;
+    display: inline-block;
+    font-family: 'Roboto', 'sans-serif';
+    font-size: 1.5rem;
+    line-height: 120%;
+    color: #00d17d; /* green */
+    width: fit-content;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+
+    &,
+    &::before,
+    &::after {
+        transition: all 0.4s ease-in-out;
+    }
+    &::after {
+        position: absolute;
+        background: url(${arrows['green-arrow.svg']});
+        content: '';
+        width: 7.41px;
+        height: 12px;
+        right: -15px;
+        top: 9px;
+    }
+    &::before {
+        position: absolute;
+        content: '';
+        background-color: #00d17d; /* green */
+        bottom: -2px;
+        width: 0;
+        height: 1px;
+        right: 0;
+    }
+    &:hover {
+        &::before {
+            left: 0;
+            width: 100%;
+        }
+        &::after {
+            right: -20px;
+        }
     }
 `;

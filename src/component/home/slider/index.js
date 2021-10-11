@@ -3,7 +3,16 @@ import React from 'react';
 import Carousel from 'react-multi-carousel';
 
 import { clubActiveImgs } from './../../../assets/photos/index';
-import { Item, LeftArrow, RightArrow } from './style';
+import {
+    Item,
+    LeftArrow,
+    RightArrow,
+    SliderContainer,
+    Activities,
+    MoreInfo,
+    SubTitle,
+    SliderContent,
+} from './style';
 
 import 'react-multi-carousel/lib/styles.css';
 
@@ -36,35 +45,40 @@ const responsive = {
 
 const Slider = () => {
     return (
-        <Carousel
-            additionalTransfrom={0}
-            arrows
-            autoPlay
-            autoPlaySpeed={2000}
-            centerMode={false}
-            className=""
-            containerClass="container-with-dots"
-            customLeftArrow={<LeftArrow />}
-            customRightArrow={<RightArrow />}
-            dotListClass=""
-            draggable
-            focusOnSelect={false}
-            infinite
-            itemClass=""
-            keyBoardControl
-            minimumTouchDrag={80}
-            renderButtonGroupOutside={false}
-            renderDotsOutside={false}
-            responsive={responsive}
-            showDots={false}
-            sliderClass=""
-            slidesToSlide={1}
-            swipeable
-        >
-            {clubActiveImgs.map((item, index) => {
-                return <Item key={index + 'activity'} src={item} current={2}></Item>;
-            })}
-        </Carousel>
+        <Activities>
+            <SliderContent>
+                <SubTitle data-aos="fade-up">Một số hình ảnh hoạt động CLB</SubTitle>
+                <SliderContainer data-aos="flip-up">
+                    <Carousel
+                        additionalTransfrom={0}
+                        arrows
+                        autoPlay
+                        autoPlaySpeed={2500}
+                        centerMode={false}
+                        customLeftArrow={<LeftArrow />}
+                        customRightArrow={<RightArrow />}
+                        draggable
+                        focusOnSelect={false}
+                        infinite
+                        keyBoardControl
+                        minimumTouchDrag={80}
+                        renderButtonGroupOutside={false}
+                        renderDotsOutside={false}
+                        responsive={responsive}
+                        showDots={false}
+                        slidesToSlide={1}
+                        swipeable
+                    >
+                        {clubActiveImgs.map((item, index) => {
+                            return <Item key={index + 'activity'} src={item} current={2}></Item>;
+                        })}
+                    </Carousel>
+                </SliderContainer>
+                <MoreInfo data-aos="fade-right" data-aos-delay="500">
+                    Xem Thêm
+                </MoreInfo>
+            </SliderContent>
+        </Activities>
     );
 };
 export default Slider;
