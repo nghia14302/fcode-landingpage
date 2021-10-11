@@ -149,6 +149,38 @@ export const TrainCImg2 = styled.img`
 
 export const TrainCImg3 = styled.img``;
 
-export const MidContainer = styled.div``;
+export const MidContainer = styled.div`
+    width: 1240px;
+    height: 376px;
+    margin: auto;
+    position: relative;
+`;
+
+export const TBImg = styled.img``;
+
+export const TBInfo = styled.div`
+    position: absolute;
+    margin-top: 140px;
+    margin-left: 100px;
+`;
+
+export const TBHead = styled.h2`
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 24px;
+    ${'' /* color: #ffffff; */}
+    margin: 35px 0px;
+`;
+
+export const TBDetail = styled.p`
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 120%;
+    ${'' /* color: #ffffff; */}
+`;
 
 export const BottomContainer = styled.div``;

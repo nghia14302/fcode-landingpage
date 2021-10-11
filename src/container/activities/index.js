@@ -34,6 +34,10 @@ import {
     TrainCBotPic,
     TrainCImg2,
     TrainCImg3,
+    TBImg,
+    TBInfo,
+    TBHead,
+    TBDetail,
 } from './style';
 
 const Activities = () => {
@@ -79,7 +83,16 @@ const Activities = () => {
                     </TrainCInfo>
                 </TrainC>
             </TopContainer>
-            <MidContainer></MidContainer>
+            <MidContainer>
+                <TBImg></TBImg>
+                <TBInfo>
+                    <TBHead>Team building</TBHead>
+                    <TBDetail>
+                        CLB hàng năm sẽ tổ chức thường buổi đi chơi dã ngoại giúp các thành viên gắn
+                        kết với nhau hơn
+                    </TBDetail>
+                </TBInfo>
+            </MidContainer>
             <BottomContainer></BottomContainer>
             {/* <Footer /> */}
         </SectionWrapper>
