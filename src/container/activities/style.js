@@ -8,11 +8,13 @@ export const TopContainer = styled.div`
     background-color: rgba(0, 219, 150, 0.03);
 `;
 
-export const PageTitle = styled.div``;
+export const PageTitle = styled.div`
+    display: flex;
+`;
 
 export const TitleInfo = styled.div`
     padding-top: 250px;
-    margin-left: 100px;
+    margin-left: 10%;
     z-index: 1000;
 `;
 
@@ -51,7 +53,9 @@ export const RegisButton = styled.button`
 `;
 
 export const CirclesContainer = styled.div`
-    z-index: -1;
+    @media only screen and (max-width: 1024px) {
+        display: none;
+    }
 `;
 
 export const EllipseImg1 = styled.img`
@@ -91,9 +95,60 @@ export const SmallCircle = styled.div`
 `;
 
 export const TrainC = styled.div`
+    margin: auto;
     margin-top: 150px;
-    padding: 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    width: 1040px;
+    display: flex;
 `;
+
+export const TrainCImg1 = styled.img``;
+
+export const TrainCInfo = styled.div`
+    margin-left: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+`;
+
+export const TrainCText = styled.div`
+    width: 520px;
+    margin-left: auto;
+    margin-bottom: auto;
+`;
+
+export const TrainCHead = styled.h2`
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 24px;
+    color: #262727;
+    margin-top: 12px;
+    margin-bottom: 35px;
+`;
+
+export const TrainCDetail = styled.p`
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 120%;
+    color: rgba(0, 0, 0, 0.6);
+`;
+
+export const TrainCBotPic = styled.div`
+    display: flex;
+    margin-top: auto;
+`;
+
+export const TrainCImg2 = styled.img`
+    margin-right: 20px;
+`;
+
+export const TrainCImg3 = styled.img``;
+
 export const MidContainer = styled.div``;
 
 export const BottomContainer = styled.div``;
