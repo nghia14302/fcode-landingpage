@@ -33,6 +33,7 @@ export const TitleHead = styled.h1`
     font-size: 72px;
     line-height: 84px;
     color: #262727;
+    margin-bottom: 50px;
 `;
 
 export const TitleSpan = styled.span`
@@ -48,6 +49,7 @@ export const Detail = styled.p`
     color: rgba(0, 0, 0, 0.6);
     min-width: 400px;
     max-width: 530px;
+    margin-bottom: 50px;
 `;
 
 export const RegisButton = styled.button`
@@ -114,7 +116,7 @@ export const TrainC = styled.div`
     margin: auto;
     margin-top: 200px;
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 200px;
     width: 1040px;
     display: flex;
     @media screen only screen and (min-width: 1024px) {
@@ -212,7 +214,7 @@ export const BottomContainer = styled.div`
 export const WorkShopSection = styled.div`
     width: 1080px;
     margin: auto;
-    padding-top: 75px;
+    padding-top: 200px;
 `;
 
 export const WorkShopInfo = styled.div`

@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+
+import AOS from 'aos';
 
 import Pic7 from '../../assets/img/activities/background.svg';
 import Pic1 from '../../assets/img/activities/pic1.png';
@@ -55,7 +57,12 @@ import {
     MoreThings,
 } from './style';
 
+import 'aos/dist/aos.css';
+
 const Activities = () => {
+    useEffect(() => {
+        AOS.init({ duration: 1200 });
+    }, []);
     return (
         <SectionWrapper>
             {/* <NavBar /> */}
@@ -63,18 +70,18 @@ const Activities = () => {
                 <PageTitle>
                     <PageRow>
                         <TitleInfo>
-                            <TitleHead>
+                            <TitleHead data-aos="fade-up">
                                 MỘT SỐ <br /> HOẠT ĐỘNG CỦA CLB
                                 <br />
                                 <TitleSpan>FCODE</TitleSpan>
                             </TitleHead>
-                            <Detail>
+                            <Detail data-aos="fade-up">
                                 Đến với FCode các bạn sẽ được tham gia rất nhiều hoạt động bổ ích,
                                 cũng như trau dồi thêm được nhiều kinh nghiệp quý giá
                             </Detail>
-                            <RegisButton>ĐĂNG KÍ</RegisButton>
+                            <RegisButton data-aos="fade-up">ĐĂNG KÍ</RegisButton>
                         </TitleInfo>
-                        <CirclesContainer>
+                        <CirclesContainer data-aos="fade-left">
                             <CircleWrap>
                                 <BigCircle></BigCircle>
                                 <EllipseImg1 src={Pic1} draggable="false"></EllipseImg1>
@@ -86,23 +93,28 @@ const Activities = () => {
                     </PageRow>
                 </PageTitle>
                 <TrainC>
-                    <TrainCImg1 src={Pic4} draggable="false"></TrainCImg1>
+                    <TrainCImg1
+                        src={Pic4}
+                        draggable="false"
+                        data-aos="fade-right"
+                        data-aos-anchor-placement="bottom-bottom"
+                    ></TrainCImg1>
                     <TrainCInfo>
-                        <TrainCText>
+                        <TrainCText data-aos="fade-down" data-aos-anchor-placement="bottom-bottom">
                             <TrainCHead>Train-C</TrainCHead>
                             <TrainCDetail>
                                 Hoạt động giúp các thành viên trau dồi thêm kĩ năng về lập trình C
                                 và cùng team tạo nên nhiều project thực tế.
                             </TrainCDetail>
                         </TrainCText>
-                        <TrainCBotPic>
+                        <TrainCBotPic data-aos="fade-up" data-aos-anchor-placement="center-bottom">
                             <TrainCImg2 src={Pic5} draggable="false"></TrainCImg2>
                             <TrainCImg3 src={Pic6} draggable="false"></TrainCImg3>
                         </TrainCBotPic>
                     </TrainCInfo>
                 </TrainC>
             </TopContainer>
-            <MidContainer>
+            <MidContainer data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
                 <TBInfo>
                     <TBHead>Team building</TBHead>
                     <TBDetail>
@@ -114,7 +126,7 @@ const Activities = () => {
             </MidContainer>
             <BottomContainer>
                 <WorkShopSection>
-                    <WorkShopInfo>
+                    <WorkShopInfo data-aos="fade-right" data-aos-anchor-placement="bottom-bottom">
                         <WorkShopHead>Workshop</WorkShopHead>
                         <WorkShopDetail>
                             Nơi đây, mọi thành viên chia sẻ và tiếp thu những kinh nghiệm hiểu biết
@@ -122,9 +134,23 @@ const Activities = () => {
                         </WorkShopDetail>
                     </WorkShopInfo>
                     <WorkShopImgWrap>
-                        <WorkShopImg1 src={Pic8} draggable="false"></WorkShopImg1>
-                        <WorkShopImg2 src={Pic9} draggable="false"></WorkShopImg2>
-                        <WorkShopImg3 src={Pic10} draggable="false"></WorkShopImg3>
+                        <WorkShopImg1
+                            src={Pic8}
+                            draggable="false"
+                            data-aos="zoom-in"
+                        ></WorkShopImg1>
+                        <WorkShopImg2
+                            src={Pic9}
+                            draggable="false"
+                            data-aos="zoom-in"
+                            data-aos-delay="150"
+                        ></WorkShopImg2>
+                        <WorkShopImg3
+                            src={Pic10}
+                            draggable="false"
+                            data-aos="zoom-in"
+                            data-aos-delay="300"
+                        ></WorkShopImg3>
                     </WorkShopImgWrap>
                     <MoreThings>
                         Và còn rất nhiều hoạt động bổ ích đang chờ các bạn tham gia...
