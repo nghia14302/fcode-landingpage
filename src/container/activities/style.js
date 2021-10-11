@@ -7,12 +7,22 @@ export const TopContainer = styled.div`
 `;
 
 export const PageTitle = styled.div`
+    max-width: 80%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 200px;
+`;
+
+export const PageRow = styled.div`
     display: flex;
+    flex-wrap: wrap;
 `;
 
 export const TitleInfo = styled.div`
-    padding-top: 250px;
-    margin-left: 10%;
+    flex: 0 0 50%;
+    max-width: 50%;
     z-index: 1000;
 `;
 
@@ -36,7 +46,8 @@ export const Detail = styled.p`
     font-size: 24px;
     line-height: 120%;
     color: rgba(0, 0, 0, 0.6);
-    width: 530px;
+    min-width: 400px;
+    max-width: 530px;
 `;
 
 export const RegisButton = styled.button`
@@ -51,54 +62,65 @@ export const RegisButton = styled.button`
 `;
 
 export const CirclesContainer = styled.div`
+    position: relative;
+    flex: 0 0 50%;
+    max-width: 50%;
     @media only screen and (max-width: 1024px) {
         display: none;
     }
 `;
 
+export const CircleWrap = styled.div`
+    @media only screen and (max-width: 1440px) {
+        transform: scale(0.7);
+    }
+`;
+
 export const EllipseImg1 = styled.img`
     position: absolute;
-    left: 63%;
-    top: 190px;
+    right: 250px;
 `;
 export const EllipseImg2 = styled.img`
     position: absolute;
-    left: 68%;
-    top: 326px;
+    right: 0;
+    top: 139px;
 `;
 export const EllipseImg3 = styled.img`
     position: absolute;
-    left: 50%;
-    top: 500px;
+    right: 375px;
+    top: 300px;
 `;
 
 export const BigCircle = styled.div`
     position: absolute;
     width: 333px;
     height: 333px;
-    left: 67%;
-    top: 200px;
     background: #00d17d;
     border-radius: 100%;
+    right: 40px;
 `;
 
 export const SmallCircle = styled.div`
     position: absolute;
     width: 172px;
     height: 172px};
-    left: 57%;
-    top: 592px;
     background: #00d17d;
     border-radius: 100%;
+    right: 350px;
+    top: 400px;
 `;
 
 export const TrainC = styled.div`
     margin: auto;
-    margin-top: 150px;
+    margin-top: 200px;
     padding-top: 100px;
     padding-bottom: 100px;
     width: 1040px;
     display: flex;
+    @media screen only screen and (min-width: 1024px) {
+        width: auto;
+        flex-direction: column;
+    }
 `;
 
 export const TrainCImg1 = styled.img``;
@@ -153,7 +175,7 @@ export const MidContainer = styled.div`
     margin: auto;
     position: relative;
     padding-top: 65px;
-    padding-bottom: 100px;
+    padding-bottom: 65px;
 `;
 
 export const TBImg = styled.img``;
@@ -170,7 +192,7 @@ export const TBHead = styled.h2`
     font-weight: bold;
     font-size: 64px;
     line-height: 24px;
-    ${'' /* color: #ffffff; */}
+    color: #ffffff;
     margin: 35px 0px;
 `;
 
@@ -180,7 +202,7 @@ export const TBDetail = styled.p`
     font-weight: normal;
     font-size: 24px;
     line-height: 120%;
-    ${'' /* color: #ffffff; */}
+    color: #ffffff;
 `;
 
 export const BottomContainer = styled.div`
