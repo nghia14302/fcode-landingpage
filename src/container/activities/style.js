@@ -3,8 +3,6 @@ import styled from 'styled-components';
 export const SectionWrapper = styled.div``;
 
 export const TopContainer = styled.div`
-    margin: 0;
-    width: 100%;
     background-color: rgba(0, 219, 150, 0.03);
 `;
 
@@ -154,6 +152,8 @@ export const MidContainer = styled.div`
     height: 376px;
     margin: auto;
     position: relative;
+    padding-top: 65px;
+    padding-bottom: 100px;
 `;
 
 export const TBImg = styled.img``;
@@ -183,4 +183,62 @@ export const TBDetail = styled.p`
     ${'' /* color: #ffffff; */}
 `;
 
-export const BottomContainer = styled.div``;
+export const BottomContainer = styled.div`
+    background-color: rgba(0, 219, 150, 0.03);
+`;
+
+export const WorkShopSection = styled.div`
+    width: 1080px;
+    margin: auto;
+    padding-top: 75px;
+`;
+
+export const WorkShopInfo = styled.div`
+    width: 433px;
+    margin-bottom: 50px;
+`;
+
+export const WorkShopHead = styled.h2`
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 35px;
+`;
+
+export const WorkShopDetail = styled.p`
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 120%;
+    color: rgba(0, 0, 0, 0.6);
+`;
+
+export const WorkShopImgWrap = styled.div`
+    margin: auto;
+    display: flex;
+`;
+
+export const WorkShopImg1 = styled.img`
+    margin-right: auto;
+`;
+
+export const WorkShopImg2 = styled.img`
+    margin-right: auto;
+`;
+
+export const WorkShopImg3 = styled.img``;
+
+export const MoreThings = styled.div`
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 42px;
+    color: rgba(0, 0, 0, 0.87);
+    padding-top: 100px;
+    padding-bottom: 75px;
+`;

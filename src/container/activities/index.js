@@ -6,6 +6,10 @@ import Pic3 from '../../assets/img/activities/pic3.png';
 import Pic4 from '../../assets/img/activities/pic4.png';
 import Pic5 from '../../assets/img/activities/pic5.png';
 import Pic6 from '../../assets/img/activities/pic6.png';
+// import Pic7 from '../../assets/img/activities/pic7.png';
+import Pic8 from '../../assets/img/activities/pic8.png';
+import Pic9 from '../../assets/img/activities/pic9.png';
+import Pic10 from '../../assets/img/activities/pic10.png';
 // import NavBar from '../../component/navbar';
 // import Footer from '../../component/footer';
 import {
@@ -38,6 +42,15 @@ import {
     TBInfo,
     TBHead,
     TBDetail,
+    WorkShopSection,
+    WorkShopInfo,
+    WorkShopHead,
+    WorkShopDetail,
+    WorkShopImgWrap,
+    WorkShopImg1,
+    WorkShopImg2,
+    WorkShopImg3,
+    MoreThings,
 } from './style';
 
 const Activities = () => {
@@ -93,7 +106,25 @@ const Activities = () => {
                     </TBDetail>
                 </TBInfo>
             </MidContainer>
-            <BottomContainer></BottomContainer>
+            <BottomContainer>
+                <WorkShopSection>
+                    <WorkShopInfo>
+                        <WorkShopHead>Workshop</WorkShopHead>
+                        <WorkShopDetail>
+                            Nơi đây, mọi thành viên chia sẻ và tiếp thu những kinh nghiệm hiểu biết
+                            về các lĩnh vực trong ngành lập trình.
+                        </WorkShopDetail>
+                    </WorkShopInfo>
+                    <WorkShopImgWrap>
+                        <WorkShopImg1 src={Pic8} draggable="false"></WorkShopImg1>
+                        <WorkShopImg2 src={Pic9} draggable="false"></WorkShopImg2>
+                        <WorkShopImg3 src={Pic10} draggable="false"></WorkShopImg3>
+                    </WorkShopImgWrap>
+                    <MoreThings>
+                        Và còn rất nhiều hoạt động bổ ích đang chờ các bạn tham gia...
+                    </MoreThings>
+                </WorkShopSection>
+            </BottomContainer>
             {/* <Footer /> */}
         </SectionWrapper>
     );
