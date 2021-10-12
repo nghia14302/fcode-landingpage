@@ -11,6 +11,16 @@ export const ItemsContainer = styled.div`
     border-radius: 12px;
     padding: 4.625em 2.4em;
     margin: 0 1.01rem 2rem 0;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 2px 2px rgba(0, 0, 0, 0.15),
+        0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.15);
+    &:hover {
+        transition-delay: 0s !important;
+        transform: translateY(-12px) !important;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.15),
+            0 4px 8px rgba(0, 0, 0, 0.15), 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
 `;
 export const ItemContent = styled.div`
     display: flex;

@@ -8,7 +8,9 @@ export const Activities = styled.div`
     height: 80%;
 `;
 
-export const SliderContent = styled(Content)``;
+export const SliderContent = styled(Content)`
+    padding: 0 12rem;
+`;
 
 export const SubTitle = styled.h6`
     display: block;
@@ -18,23 +20,21 @@ export const SubTitle = styled.h6`
     font-size: 2.25rem;
     line-height: 42px;
     letter-spacing: 1.25px;
+    width: fit-content;
     margin-bottom: 62px;
 `;
 
 export const SliderContainer = styled.div`
     position: relative;
-    width: 100%;
-    height: 405px;
     margin-bottom: 2.31rem;
 `;
 
 export const Item = styled.div`
     background: url(${(props) => props.src});
     background-repeat: no-repeat;
-    background-size: 110% 100%;
-    height: 403px;
-    border-radius: 12px;
-    margin: 0 10px;
+    width: 403px;
+    height: 294px;
+    margin: 0 2.5rem;
 `;
 
 export const SlideArrow = styled.div`
@@ -64,7 +64,7 @@ export const SlideArrow = styled.div`
 `;
 
 export const LeftArrow = styled(SlideArrow)`
-    left: 5px;
+    left: 15px;
 
     &::before {
         background: url(${arrows['left-arrow.svg']});
@@ -74,7 +74,7 @@ export const LeftArrow = styled(SlideArrow)`
 `;
 
 export const RightArrow = styled(SlideArrow)`
-    right: 5px;
+    right: 38px;
 
     &::before {
         background: url(${arrows['right-arrow.svg']});

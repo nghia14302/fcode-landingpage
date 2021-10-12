@@ -14,6 +14,10 @@ export const Content = styled.div`
     height: 100%;
 `;
 // common components
+export const DescriptionContainer = styled.div`
+    max-width: 635px;
+`;
+
 export const Title = styled.h2`
     position: relative;
     font-family: 'Roboto', 'sans-serif';

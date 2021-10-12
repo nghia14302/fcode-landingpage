@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Description, Title, Content } from '../style';
+import { DescriptionContainer, Description, Title, Content } from '../style';
 import Items from './items';
-import { CardsContainer, DescriptionContainer, Spirit } from './style';
+import { CardsContainer, Spirit } from './style';
 
 const data = [
     {

@@ -2,7 +2,7 @@ import React from 'react';
 
 import Carousel from 'react-multi-carousel';
 
-import { clubActiveImgs } from './../../../assets/photos/index';
+import { clubActiveFix } from './../../../assets/photos';
 import {
     Item,
     LeftArrow,
@@ -57,7 +57,6 @@ const Slider = () => {
                         centerMode={false}
                         customLeftArrow={<LeftArrow />}
                         customRightArrow={<RightArrow />}
-                        draggable
                         focusOnSelect={false}
                         infinite
                         keyBoardControl
@@ -67,9 +66,8 @@ const Slider = () => {
                         responsive={responsive}
                         showDots={false}
                         slidesToSlide={1}
-                        swipeable
                     >
-                        {clubActiveImgs.map((item, index) => {
+                        {clubActiveFix.map((item, index) => {
                             return <Item key={index + 'activity'} src={item} current={2}></Item>;
                         })}
                     </Carousel>

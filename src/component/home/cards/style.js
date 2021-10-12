@@ -6,6 +6,7 @@ export const Spirit = styled.div`
     flex-direction: column;
     justify-content: center;
     width: 100%;
+    padding: 2rem 0;
 `;
 
 export const CardsContainer = styled.div`
@@ -15,8 +16,4 @@ export const CardsContainer = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
-`;
-
-export const DescriptionContainer = styled.div`
-    max-width: 628px;
 `;

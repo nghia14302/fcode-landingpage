@@ -9,4 +9,6 @@ const importClubActivities = (r) => {
 
 export const clubActiveImgs = importClubActivities(require.context('./', false, /\.jpeg/));
 
+export const clubActiveFix = importClubActivities(require.context('./', false, /\.png/));
+
 export default clubActiveImgs;
