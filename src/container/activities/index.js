@@ -1,17 +1,19 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import AOS from 'aos';
 
-import Pic7 from '../../assets/img/activities/background.svg';
-import Pic1 from '../../assets/img/activities/pic1.png';
-import Pic2 from '../../assets/img/activities/pic2.png';
-import Pic3 from '../../assets/img/activities/pic3.png';
-import Pic4 from '../../assets/img/activities/pic4.png';
-import Pic5 from '../../assets/img/activities/pic5.png';
-import Pic6 from '../../assets/img/activities/pic6.png';
-import Pic8 from '../../assets/img/activities/pic8.png';
-import Pic9 from '../../assets/img/activities/pic9.png';
-import Pic10 from '../../assets/img/activities/pic10.png';
+import {
+    Pic1,
+    Pic2,
+    Pic3,
+    Pic4,
+    Pic5,
+    Pic6,
+    Pic7,
+    Pic8,
+    Pic9,
+    Pic10,
+} from '../../assets/img/activities';
 // import NavBar from '../../component/navbar';
 // import Footer from '../../component/footer';
 import {
@@ -60,9 +62,7 @@ import {
 import 'aos/dist/aos.css';
 
 const Activities = () => {
-    useEffect(() => {
-        AOS.init({ duration: 1200 });
-    }, []);
+    AOS.init({ duration: 1200 });
     return (
         <SectionWrapper>
             {/* <NavBar /> */}
