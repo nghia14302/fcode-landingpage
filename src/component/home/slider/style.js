@@ -10,6 +10,9 @@ export const Activities = styled.div`
 
 export const SliderContent = styled(Content)`
     padding: 0 12rem;
+    @media screen and (max-width: 1440px) {
+        padding: 0 4rem;
+    }
 `;
 
 export const SubTitle = styled.h6`
@@ -32,7 +35,7 @@ export const SliderContainer = styled.div`
 export const Item = styled.div`
     background: url(${(props) => props.src});
     background-repeat: no-repeat;
-    width: 403px;
+    width: 100%;
     height: 294px;
     margin: 0 2.5rem;
 `;
