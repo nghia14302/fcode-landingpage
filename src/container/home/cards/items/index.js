@@ -14,7 +14,7 @@ const Items = (props) => {
     return (
         <ItemsContainer
             data-aos="flip-right"
-            data-aos-delay={0 + props.index * 150}
+            data-aos-delay={0 + props.index * 100}
             data-aos-duration={600}
             data-aos-anchor-placement="bottom-bottom"
         >

@@ -13,7 +13,7 @@ AOS.init({
     // Global settings:
     disable: false,
     debounceDelay: 50, // the delay when resize windows
-    throttleDelay: 50, // the delay when scrolling
+    throttleDelay: 0, // the delay when scrolling
 
     // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
     offset: 120, // the trigger point (px)
