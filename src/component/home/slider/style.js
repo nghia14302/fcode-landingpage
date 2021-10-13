@@ -9,9 +9,8 @@ export const Activities = styled.div`
 `;
 
 export const SliderContent = styled(Content)`
-    padding: 0 12rem;
     @media screen and (max-width: 1440px) {
-        padding: 0 4rem;
+        align-items: center;
     }
 `;
 
@@ -30,14 +29,24 @@ export const SubTitle = styled.h6`
 export const SliderContainer = styled.div`
     position: relative;
     margin-bottom: 2.31rem;
+    @media screen and (max-width: 1440px) {
+        max-width: 900px;
+    }
+    @media screen and (max-width: 1040px) {
+        max-width: 450px;
+    }
 `;
 
 export const Item = styled.div`
     background: url(${(props) => props.src});
     background-repeat: no-repeat;
-    width: 100%;
+    width: 403px;
     height: 294px;
-    margin: 0 2.5rem;
+    margin: 0 1.7rem;
+
+    @media screen and (max-width: 1440px) {
+        
+    }
 `;
 
 export const SlideArrow = styled.div`
@@ -83,6 +92,9 @@ export const RightArrow = styled(SlideArrow)`
         background: url(${arrows['right-arrow.svg']});
         background-repeat: no-repeat;
         background-size: stretch;
+    }
+    @media screen and (max-width: 1440px) {
+        right: 10px;
     }
 `;
 

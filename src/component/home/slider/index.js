@@ -20,9 +20,10 @@ const responsive = {
     desktop: {
         breakpoint: {
             max: 3000,
-            min: 1600,
+            min: 1440,
         },
         items: 3,
+        partialVisibilityGutter: 40,
     },
     mobile: {
         breakpoint: {
@@ -30,13 +31,15 @@ const responsive = {
             min: 0,
         },
         items: 1,
+        partialVisibilityGutter: 30,
     },
     tablet: {
         breakpoint: {
-            max: 1600,
+            max: 1440,
             min: 1040,
         },
         items: 2,
+        partialVisibilityGutter: 30,
     },
 };
 
