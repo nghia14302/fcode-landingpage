@@ -4,7 +4,7 @@ import { Content } from '../style';
 
 export const StageInviteBackground = styled.div`
     position: absolute;
-    background-color: rgba(0, 219, 150, 0.13); /* green light */
+    background-color: rgba(0, 219, 150, 0.03); /* green light */
     top: -254px;
     width: 100%;
     height: 1560px;
