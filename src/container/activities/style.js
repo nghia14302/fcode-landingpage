@@ -17,14 +17,18 @@ export const PageTitle = styled.div`
 `;
 
 export const PageRow = styled.div`
-    display: flex;
     flex-wrap: wrap;
+    @media only screen and (min-width: 1160px) {
+        display: flex;
+    }
 `;
 
 export const TitleInfo = styled.div`
     flex: 0 0 50%;
-    max-width: 50%;
     z-index: 1000;
+    @media only screen and (min-width: 1160px) {
+        max-width: 50%;
+    }
 `;
 
 export const TitleHead = styled.h1`
@@ -65,20 +69,16 @@ export const RegisButton = styled.button`
 `;
 
 export const CirclesContainer = styled.div`
-    position: relative;
     flex: 0 0 50%;
     max-width: 50%;
-    @media only screen and (max-width: 1024px) {
+    @media only screen and (max-width: 1160px) {
         display: none;
     }
 `;
 
 export const CircleWrap = styled.div`
-    ${
-        '' /* @media only screen and (max-width: 1440px) {
-        transform: scale(0.7);
-    } */
-    }
+    position: relative;
+    width: 100%;
 `;
 
 export const EllipseImg1 = styled.img`
@@ -122,13 +122,17 @@ export const TrainC = styled.div`
     padding-bottom: 200px;
     max-width: 1040px;
     display: flex;
-    @media screen only screen and (min-width: 1024px) {
-        width: auto;
-        flex-direction: column;
+    min-height: 521px;
+    @media only screen and (max-width: 620px) {
+        min-height: 850px;
     }
 `;
 
-export const TrainCImg1 = styled.img``;
+export const TrainCImg1 = styled.img`
+    @media only screen and (max-width: 1040px) {
+        display: none;
+    }
+`;
 
 export const TrainCInfo = styled.div`
     margin-left: 20px;
@@ -138,9 +142,15 @@ export const TrainCInfo = styled.div`
 `;
 
 export const TrainCText = styled.div`
-    width: 520px;
-    margin-left: auto;
+    max-width: 520px;
     margin-bottom: auto;
+    margin-left: auto;
+    @media only screen and (max-width: 1040px) {
+        margin-right: auto;
+    }
+    @media only screen and (max-width: 620px) {
+        margin-bottom: 50px;
+    }
 `;
 
 export const TrainCHead = styled.h2`
@@ -166,21 +176,39 @@ export const TrainCDetail = styled.p`
 export const TrainCBotPic = styled.div`
     display: flex;
     margin-top: auto;
+    height: 100%;
+    @media only screen and (max-width: 1040px) {
+        margin: auto;
+    }
+    @media only screen and (max-width: 620px) {
+        flex-direction: column;
+    }
 `;
 
 export const TrainCImg2 = styled.img`
     margin-right: 20px;
+    @media only screen and (max-width: 620px) {
+        margin: auto;
+        width: 85%;
+        height: 85%;
+        margin-bottom: 50px;
+    }
 `;
 
-export const TrainCImg3 = styled.img``;
+export const TrainCImg3 = styled.img`
+    @media only screen and (max-width: 620px) {
+        margin: auto;
+        width: 85%;
+        height: 85%;
+    }
+`;
 
 export const MidContainer = styled.div`
     max-width: 1240px;
-    height: 376px;
     margin: auto;
     position: relative;
-    padding-top: 65px;
-    padding-bottom: 65px;
+    margin-top: 65px;
+    margin-bottom: 65px;
 `;
 
 export const TBImg = styled.img`
@@ -190,8 +218,7 @@ export const TBImg = styled.img`
 
 export const TBInfo = styled.div`
     position: absolute;
-    margin-top: 140px;
-    margin-left: 100px;
+    top: 27%;
 `;
 
 export const TBHead = styled.h2`
@@ -201,7 +228,8 @@ export const TBHead = styled.h2`
     font-size: 64px;
     line-height: 24px;
     color: #ffffff;
-    margin: 35px 0px;
+    margin-bottom: 2%;
+    margin-left: 5%;
     @media only screen and (max-width: 1240px) {
         font-size: 5vw;
     }
@@ -214,6 +242,7 @@ export const TBDetail = styled.p`
     font-size: 24px;
     line-height: 120%;
     color: #ffffff;
+    margin-left: 5%;
     @media only screen and (max-width: 1240px) {
         font-size: 2vw;
     }
@@ -224,7 +253,7 @@ export const BottomContainer = styled.div`
 `;
 
 export const WorkShopSection = styled.div`
-    width: 1080px;
+    max-width: 1024px;
     margin: auto;
     padding-top: 200px;
 `;
@@ -232,6 +261,9 @@ export const WorkShopSection = styled.div`
 export const WorkShopInfo = styled.div`
     width: 433px;
     margin-bottom: 50px;
+    @media only screen and (max-width: 1030px) {
+        margin-left: 50px;
+    }
 `;
 
 export const WorkShopHead = styled.h2`
@@ -256,19 +288,48 @@ export const WorkShopDetail = styled.p`
 export const WorkShopImgWrap = styled.div`
     margin: auto;
     display: flex;
+    flex-direction: column;
+    @media only screen and (min-width: 1030px) {
+        flex-direction: row;
+    }
 `;
 
 export const WorkShopImg1 = styled.img`
     margin-right: auto;
+    @media only screen and (max-width: 1030px) {
+        width: 80%;
+        height: 80%;
+        margin: auto;
+        margin-bottom: 20px;
+    }
 `;
 
 export const WorkShopImg2 = styled.img`
     margin-right: auto;
+    @media only screen and (max-width: 1030px) {
+        width: 80%;
+        height: 80%;
+        margin: auto;
+        margin-bottom: 20px;
+    }
 `;
 
-export const WorkShopImg3 = styled.img``;
+export const WorkShopImg3 = styled.img`
+    @media only screen and (max-width: 1030px) {
+        width: 80%;
+        height: 80%;
+        margin: auto;
+    }
+`;
 
 export const MoreThings = styled.div`
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+`;
+
+export const MoreThingsText = styled.h2`
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;

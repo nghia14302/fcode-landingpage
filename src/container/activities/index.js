@@ -57,6 +57,7 @@ import {
     WorkShopImg2,
     WorkShopImg3,
     MoreThings,
+    MoreThingsText,
 } from './style';
 
 import 'aos/dist/aos.css';
@@ -152,11 +153,14 @@ const Activities = () => {
                             data-aos-delay="300"
                         ></WorkShopImg3>
                     </WorkShopImgWrap>
-                    <MoreThings>
-                        Và còn rất nhiều hoạt động bổ ích đang chờ các bạn tham gia...
-                    </MoreThings>
                 </WorkShopSection>
+                <MoreThings>
+                    <MoreThingsText>
+                        Và còn rất nhiều hoạt động bổ ích đang chờ các bạn tham gia...
+                    </MoreThingsText>
+                </MoreThings>
             </BottomContainer>
+
             {/* <Footer /> */}
         </SectionWrapper>
     );
