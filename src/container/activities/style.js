@@ -13,6 +13,7 @@ export const PageTitle = styled.div`
     margin-right: auto;
     margin-left: auto;
     padding-top: 200px;
+    max-width: 1240px;
 `;
 
 export const PageRow = styled.div`
@@ -73,8 +74,10 @@ export const CirclesContainer = styled.div`
 `;
 
 export const CircleWrap = styled.div`
-    @media only screen and (max-width: 1440px) {
+    ${
+        '' /* @media only screen and (max-width: 1440px) {
         transform: scale(0.7);
+    } */
     }
 `;
 
@@ -117,7 +120,7 @@ export const TrainC = styled.div`
     margin-top: 200px;
     padding-top: 100px;
     padding-bottom: 200px;
-    width: 1040px;
+    max-width: 1040px;
     display: flex;
     @media screen only screen and (min-width: 1024px) {
         width: auto;
@@ -172,7 +175,7 @@ export const TrainCImg2 = styled.img`
 export const TrainCImg3 = styled.img``;
 
 export const MidContainer = styled.div`
-    width: 1240px;
+    max-width: 1240px;
     height: 376px;
     margin: auto;
     position: relative;
@@ -180,7 +183,10 @@ export const MidContainer = styled.div`
     padding-bottom: 65px;
 `;
 
-export const TBImg = styled.img``;
+export const TBImg = styled.img`
+    max-width: 100%;
+    height: auto;
+`;
 
 export const TBInfo = styled.div`
     position: absolute;
@@ -196,6 +202,9 @@ export const TBHead = styled.h2`
     line-height: 24px;
     color: #ffffff;
     margin: 35px 0px;
+    @media only screen and (max-width: 1240px) {
+        font-size: 5vw;
+    }
 `;
 
 export const TBDetail = styled.p`
@@ -205,6 +214,9 @@ export const TBDetail = styled.p`
     font-size: 24px;
     line-height: 120%;
     color: #ffffff;
+    @media only screen and (max-width: 1240px) {
+        font-size: 2vw;
+    }
 `;
 
 export const BottomContainer = styled.div`
