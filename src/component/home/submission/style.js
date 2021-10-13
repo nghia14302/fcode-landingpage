@@ -4,10 +4,14 @@ import { Content } from '../style';
 
 export const StageInviteBackground = styled.div`
     position: absolute;
-    background-color: rgba(0, 219, 150, 0.13); /* green light */
-    top: -324px;
+    background-color: rgba(0, 219, 150, 0.03); /* green light */
+    top: -254px;
     width: 100%;
-    height: 130%;
+    height: 1617px;
+    @media screen and (max-width: 720px) {
+        width: 100%;
+        height: 2400px;
+    }
 `;
 
 export const StageInvite = styled.div`
@@ -18,8 +22,12 @@ export const StageInvite = styled.div`
 `;
 export const SubmitContainer = styled(Content)`
     position: relative;
-    margin: 0 12.69rem;
+    margin: 0 auto;
     padding-top: 12.69rem;
+    @media screen and (max-width: 1200px) {
+        padding: 4rem;
+        margin: 0;
+    }
 `;
 
 export const StageIntroduction = styled.div`
@@ -36,4 +44,7 @@ export const Stick = styled.div`
     bottom: -50px;
     left: 115px;
     z-index: -1;
+    @media screen and (max-width: 1270px) {
+        display: none;
+    }
 `;

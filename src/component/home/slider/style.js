@@ -8,12 +8,25 @@ export const Activities = styled.div`
     height: 80%;
 `;
 
-export const SliderContent = styled(Content)`
+export const ContentsContainer = styled(Content)`
+    padding: 0 8rem;
+    width: 100%;
     @media screen and (max-width: 1440px) {
         align-items: center;
+        padding: 0 4rem;
+    }
+    @media screen and (max-width: 560px) {
+        padding: 0 1.4rem;
     }
 `;
-
+export const SliderContent = styled.div`
+    margin: 0 auto;
+    @media screen and (max-width: 1440px) {
+        align-items: center;
+        width: 100%;
+        padding: 0 1rem;
+    }
+`;
 export const SubTitle = styled.h6`
     display: block;
     font-family: 'Roboto', 'sans-serif';
@@ -24,31 +37,38 @@ export const SubTitle = styled.h6`
     letter-spacing: 1.25px;
     width: fit-content;
     margin-bottom: 62px;
+    @media screen and (max-width: 1000px) {
+        margin-bottom: 2rem;
+    }
 `;
 
 export const SliderContainer = styled.div`
     position: relative;
-    margin-bottom: 2.31rem;
+    margin: 0 auto 2.31rem;
+    max-width: 1245px;
     @media screen and (max-width: 1440px) {
-        max-width: 900px;
+        width: 900px;
     }
-    @media screen and (max-width: 1040px) {
-        max-width: 450px;
+    @media screen and (max-width: 1000px) {
+        width: 430px;
+    }
+    @media screen and (max-width: 600px) {
+        width: 380px;
     }
 `;
 
-export const Item = styled.div`
+export const Item = styled.img`
+    position: relative;
     background: url(${(props) => props.src});
     background-repeat: no-repeat;
+    background-size: contain;
     width: 403px;
     height: 294px;
-    margin: 0 1.7rem;
-
-    @media screen and (max-width: 1440px) {
-        
+    @media screen and (max-width: 610px) {
+        width: 360px;
+        height: 262px;
     }
 `;
-
 export const SlideArrow = styled.div`
     position: absolute;
     display: block;
@@ -76,8 +96,8 @@ export const SlideArrow = styled.div`
 `;
 
 export const LeftArrow = styled(SlideArrow)`
-    left: 15px;
-
+    left: 5px;
+    z-index: 999;
     &::before {
         background: url(${arrows['left-arrow.svg']});
         background-repeat: no-repeat;
@@ -86,15 +106,18 @@ export const LeftArrow = styled(SlideArrow)`
 `;
 
 export const RightArrow = styled(SlideArrow)`
-    right: 38px;
-
+    right: 25px;
+    z-index: 999;
     &::before {
         background: url(${arrows['right-arrow.svg']});
         background-repeat: no-repeat;
         background-size: stretch;
     }
     @media screen and (max-width: 1440px) {
-        right: 10px;
+        right: 30px;
+    }
+    @media screen and (max-width: 320px) {
+        right: 0px;
     }
 `;
 
@@ -108,7 +131,6 @@ export const MoreInfo = styled.a`
     width: fit-content;
     cursor: pointer;
     transition: all 0.4s ease-in-out;
-
     &,
     &::before,
     &::after {

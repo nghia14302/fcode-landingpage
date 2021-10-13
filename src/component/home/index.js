@@ -16,7 +16,7 @@ AOS.init({
     throttleDelay: 50, // the delay when scrolling
 
     // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-    offset: 100, // the trigger point (px)
+    offset: 120, // the trigger point (px)
     delay: 0,
     duration: 1200, // values from 0 to 3000, with step 50ms
     easing: 'eas',

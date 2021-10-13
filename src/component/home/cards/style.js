@@ -15,5 +15,8 @@ export const CardsContainer = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    max-width: 1064px;
+    @media screen and (max-width: 1200px) {
+        max-width: 600px;
+    }
 `;

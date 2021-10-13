@@ -6,12 +6,11 @@ export const ItemsContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 20.375rem;
-    height: 31.25rem;
+    max-width: 15.31rem;
+    height: 23.4rem;
     border-radius: 12px;
-    padding: 4.625em 2.4em;
+    padding: 1.625rem 3.125rem;
     margin: 0 1.01rem 2rem 0;
-    cursor: pointer;
     transition: all 0.3s ease-in-out;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 2px 2px rgba(0, 0, 0, 0.15),
         0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.15);
@@ -61,5 +60,8 @@ export const ItemDescription = styled.p`
     line-height: 24px;
     text-align: center;
     color: white;
-    margin-top: 5.41em;
+    margin-top: 4.0625rem;
+    @media screen and (max-width: 360px) {
+        margin-top: 3.6em;
+    }
 `;

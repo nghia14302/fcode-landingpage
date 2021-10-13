@@ -17,10 +17,13 @@ export const IconContainer = styled.div`
     justify-content: center;
     align-items: center;
     background: ${(props) => (props.enable ? '#00d17d' : '#8e8e8e')}; /* green and gray */
-    width: 116px;
-    height: 116px;
+    min-width: 116px;
+    min-height: 116px;
     border-radius: 50%;
     margin-right: 2.56rem;
+    @media screen and (max-width: 980px) {
+        display: none;
+    }
 `;
 
 export const ItemIcon = styled.div`
@@ -35,19 +38,28 @@ export const ItemIcon = styled.div`
 export const ItemForm = styled.div`
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     background: white;
     width: 42rem;
-    height: 10.25rem;
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.14), 0px 1px 18px rgba(0, 0, 0, 0.12),
         0px 3px 5px rgba(0, 0, 0, 0.2);
     border-radius: 12px;
     transition: all 0.4s ease-in-out;
+    padding: 1.75rem 2.18rem;
 
     &:hover {
         transform: translateX(14px);
+    }
+
+    @media screen and (max-width: 720px) {
+        width: 100%;
+        min-height: 14.5rem;
+    }
+    @media screen and (max-width: 720px) {
+        min-height: 20.5rem;
     }
 `;
 
@@ -57,6 +69,9 @@ export const DescriptionContainer = styled.div`
     justify-content: space-between;
     width: 392px;
     height: 120px;
+    @media screen and (max-width: 720px) {
+        max-width: 280;
+    }
 `;
 
 export const FormTitle = styled.h6`
@@ -99,7 +114,7 @@ export const FormButton = styled.button`
     height: 44px;
     cursor: pointer;
     transition: all 0.4s ease-in-out;
-
+    margin-top: 10px;
     &:hover {
         transition-delay: 0;
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.15),

@@ -14,9 +14,9 @@ const Items = (props) => {
     return (
         <ItemsContainer
             data-aos="flip-right"
-            data-aos-delay={100 + props.index * 200}
+            data-aos-delay={0 + props.index * 150}
             data-aos-duration={600}
-            data-aos-anchor-placement="center-bottom"
+            data-aos-anchor-placement="bottom-bottom"
         >
             <ItemContent>
                 <ItemIcon src={icons[props.icon]} />
