@@ -49,17 +49,16 @@ export const ItemForm = styled.div`
     border-radius: 12px;
     transition: all 0.4s ease-in-out;
     padding: 1.75rem 2.18rem;
-
     &:hover {
         transform: translateX(14px);
     }
 
     @media screen and (max-width: 720px) {
         width: 100%;
-        min-height: 14.5rem;
+        /* min-height: 14.5rem; */
     }
-    @media screen and (max-width: 720px) {
-        min-height: 20.5rem;
+    @media screen and (max-width: 520px) {
+        height: 19.3rem;
     }
 `;
 
@@ -119,5 +118,8 @@ export const FormButton = styled.button`
         transition-delay: 0;
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.15),
             0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+    @media screen and (max-width: 520px) {
+        display: ${(props) => (props.enable ? 'block' : 'none')};
     }
 `;
