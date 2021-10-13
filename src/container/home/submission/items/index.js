@@ -23,7 +23,7 @@ const Items = (props) => {
             <IconContainer enable={props.enable}>
                 <ItemIcon src={icons[props.icon]} />
             </IconContainer>
-            <ItemForm>
+            <ItemForm enable={props.enable}>
                 <DescriptionContainer>
                     <FormTitle enable={props.enable}>{props.title}</FormTitle>
                     <FormTime>{props.time}</FormTime>

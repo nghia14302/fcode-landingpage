@@ -58,7 +58,9 @@ export const ItemForm = styled.div`
         /* min-height: 14.5rem; */
     }
     @media screen and (max-width: 520px) {
-        height: 19.3rem;
+        padding: 2.2rem;
+        align-content: space-between;
+        min-height: ${(props) => (props.enable ? 21.3 + 'em' : 'fit-content')};
     }
 `;
 
@@ -67,9 +69,9 @@ export const DescriptionContainer = styled.div`
     flex-direction: column;
     justify-content: space-between;
     width: 392px;
-    height: 120px;
     @media screen and (max-width: 720px) {
         max-width: 280;
+        height: fit-content;
     }
 `;
 
