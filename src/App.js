@@ -2,7 +2,6 @@ import React from 'react';
 
 import Landing from './component/Landing';
 import { GlobalStyle } from './global';
-import layer from './layer.svg';
 
 function App() {
     return (

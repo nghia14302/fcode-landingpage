@@ -6,7 +6,7 @@ export const StyledFoundation = styled.div`
     grid-template-columns: 485px 3fr;
     grid-template-rows: 1fr;
     padding-top: 50px;
-    height: 50vh;
+    min-height: 50vh;
 
     > div:nth-of-type(1) {
         display: flex;

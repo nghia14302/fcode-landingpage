@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Footer from '../Footer';
 import Header from '../Header';
 import Foundation from './Foundation';
 import Frame1 from './Frame1';
@@ -12,6 +13,7 @@ function Landing() {
             <div>
                 <Frame1></Frame1>
                 <Foundation></Foundation>
+                <Footer></Footer>
             </div>
         </StyledLanding>
     );
