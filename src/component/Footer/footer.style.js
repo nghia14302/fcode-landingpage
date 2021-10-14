@@ -33,4 +33,12 @@ const SText = styled.div`
     }
 `;
 
-export { StyledFooter, LText, SText };
+const XSText = styled.div`
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #00000099;
+`;
+
+export { StyledFooter, LText, SText, XSText };

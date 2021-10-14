@@ -4,13 +4,13 @@ import BlankButton from '../BlankButton';
 import FilledButton from '../FilledButton';
 import { StyledNavBar } from './navBar.style';
 
-const NavBar = (props) => {
+const NavBar = () => {
     return (
         <StyledNavBar>
             <BlankButton>Trang chủ</BlankButton>
             <BlankButton>Hoạt động</BlankButton>
             <BlankButton>Timeline</BlankButton>
-            <BlankButton>Q&amp;A</BlankButton>
+            <BlankButton>FAQ</BlankButton>
             <FilledButton>ĐĂNG KÍ</FilledButton>
         </StyledNavBar>
     );

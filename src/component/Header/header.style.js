@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledHeader = styled.div`
+const StyledHeader = styled.div`
     width: 100%;
     height: 64px;
     position: sticky;
@@ -18,3 +18,9 @@ export const StyledHeader = styled.div`
         padding: 8px;
     }
 `;
+
+const Container = styled.div`
+    width: 100%;
+`;
+
+export { StyledHeader, Container };

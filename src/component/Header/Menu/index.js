@@ -1,16 +1,23 @@
 import React from 'react';
 
 import BlankButton from '../BlankButton';
-import { StyledMenu } from './menu.style';
+import FilledButton from '../FilledButton';
+import Logo from '../Logo';
+import { StyledMenu, LogoContainer, BtnContainer } from './menu.style';
 
 const Menu = (props) => {
     return (
         <StyledMenu open={props.open}>
-            <BlankButton>Trang chủ</BlankButton>
-            <BlankButton>Hoạt động</BlankButton>
-            <BlankButton>Timeline</BlankButton>
-            <BlankButton>Q&amp;A</BlankButton>
-            <BlankButton>ĐĂNG KÍ</BlankButton>
+            <LogoContainer>
+                <Logo></Logo>
+            </LogoContainer>
+            <BtnContainer>
+                <BlankButton>Trang chủ</BlankButton>
+                <BlankButton>Hoạt động</BlankButton>
+                <BlankButton>Timeline</BlankButton>
+                <BlankButton>FAQ</BlankButton>
+                <FilledButton>ĐĂNG KÍ</FilledButton>
+            </BtnContainer>
         </StyledMenu>
     );
 };

@@ -7,7 +7,7 @@ export const StyledSocialMedia = styled.div`
     justify-content: space-between;
     align-items: center;
 
-    @media (max-width: 768px) {
+    @media (max-width: 400px) {
         width: 100%;
 
         > img {
