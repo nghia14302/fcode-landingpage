@@ -6,7 +6,7 @@ import Foundation from './Foundation';
 import Frame1 from './Frame1';
 import { StyledLanding, View } from './landing.style';
 
-function Landing() {
+const Landing = () => {
     return (
         <StyledLanding>
             <Header></Header>

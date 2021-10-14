@@ -2,7 +2,7 @@ import React from 'react';
 
 import { StyledAboutFound, LText, SText, More } from './aboutFound.style';
 
-const AboutFound = (props) => {
+const AboutFound = () => {
     return (
         <StyledAboutFound>
             <LText>Câu lạc bộ FCode</LText>

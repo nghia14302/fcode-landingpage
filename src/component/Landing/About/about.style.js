@@ -4,7 +4,7 @@ const StyledAbout = styled.div`
     color: #262727;
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 25px;
     z-index: 1;
 `;
 
@@ -31,7 +31,7 @@ const BtnContainer = styled.div`
     display: flex;
     align-items: center;
     gap: 30px;
-    margin: 10px 0px;
+    margin: 25px 0px;
 `;
 
 export { StyledAbout, LText, SText, BtnContainer };

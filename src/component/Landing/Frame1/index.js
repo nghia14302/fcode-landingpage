@@ -4,7 +4,7 @@ import About from '../About';
 import Hero from '../Hero';
 import { StyledFrame1, View } from './frame1.style';
 
-function Frame1() {
+const Frame1 = () => {
     return (
         <StyledFrame1>
             <View>
@@ -13,6 +13,6 @@ function Frame1() {
             </View>
         </StyledFrame1>
     );
-}
+};
 
 export default Frame1;

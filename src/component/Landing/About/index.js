@@ -7,7 +7,7 @@ import { StyledAbout, LText, SText, BtnContainer } from './about.style';
 
 import 'aos/dist/aos.css';
 
-function About() {
+const About = () => {
     useEffect(() => {
         AOS.init({
             duration: 2000,
