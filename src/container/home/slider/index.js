@@ -2,7 +2,7 @@ import React from 'react';
 
 import Carousel from 'react-multi-carousel';
 
-import { clubActiveFix } from './../../../assets/photos';
+import { clubActiveFix } from './../../../assets/img/home';
 import {
     Item,
     LeftArrow,
