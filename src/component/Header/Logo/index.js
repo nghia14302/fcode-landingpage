@@ -1,13 +1,13 @@
 import React from 'react';
 
 import logo from '../../../assets/logo.svg';
-import { StyledLogo } from './logo.style';
+import { StyledLogo, LText } from './logo.style';
 
-const Logo = (props) => {
+const Logo = () => {
     return (
         <StyledLogo>
             <img src={logo} alt="Logo"></img>
-            <div>FCode</div>
+            <LText>FCode</LText>
         </StyledLogo>
     );
 };

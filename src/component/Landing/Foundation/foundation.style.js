@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledFoundation = styled.div`
+const StyledFoundation = styled.div`
     background: transparent;
     display: grid;
     grid-template-columns: 485px 3fr;
@@ -8,26 +8,29 @@ export const StyledFoundation = styled.div`
     padding-top: 50px;
     min-height: 50vh;
 
-    > div:nth-of-type(1) {
-        display: flex;
-        justify-content: center;
-    }
-
-    > div:nth-of-type(2) {
-        display: flex;
-        align-items: flex-end;
-        box-sizing: border-box;
-        padding: 55px 0px;
-    }
-
     @media (max-width: 1200px) {
         grid-template-columns: min-content 1fr;
     }
 
     @media (max-width: 768px) {
         grid-template-columns: 1fr;
-        > div:nth-of-type(1) {
-            display: none;
-        }
     }
 `;
+
+const Left = styled.div`
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+`;
+
+const Right = styled.div`
+    display: flex;
+    align-items: flex-end;
+    box-sizing: border-box;
+    padding: 55px 0px;
+`;
+
+export { StyledFoundation, Left, Right };

@@ -2,15 +2,15 @@ import React from 'react';
 
 import About from '../About';
 import Hero from '../Hero';
-import { StyledFrame1 } from './frame1.style';
+import { StyledFrame1, View } from './frame1.style';
 
-function Frame1(prop) {
+function Frame1() {
     return (
         <StyledFrame1>
-            <div>
+            <View>
                 <About></About>
                 <Hero></Hero>
-            </div>
+            </View>
         </StyledFrame1>
     );
 }

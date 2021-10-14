@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 
 import computer from '../../../assets/computer.svg';
 
-const Hero = (props) => {
+const Hero = () => {
     const svg = useRef();
 
     const animate = () => {

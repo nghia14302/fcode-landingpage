@@ -1,12 +1,14 @@
 import React, { useEffect } from 'react';
 
-import AOS from "aos";
+import AOS from 'aos';
+
 import AboutFound from '../AboutFound';
 import FoundLogo from '../FoundLogo';
-import { StyledFoundation } from './foundation.style';
+import { StyledFoundation, Left, Right } from './foundation.style';
+
 import 'aos/dist/aos.css';
 
-const Foundation = (props) => {
+const Foundation = () => {
     useEffect(() => {
         AOS.init({
             duration: 2000,
@@ -14,12 +16,12 @@ const Foundation = (props) => {
     }, []);
     return (
         <StyledFoundation>
-            <div data-aos="fade-up">
+            <Left data-aos="fade-up">
                 <FoundLogo></FoundLogo>
-            </div>
-            <div data-aos="fade-up">
+            </Left>
+            <Right data-aos="fade-up">
                 <AboutFound></AboutFound>
-            </div>
+            </Right>
         </StyledFoundation>
     );
 };
