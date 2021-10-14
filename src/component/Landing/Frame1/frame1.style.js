@@ -20,7 +20,7 @@ export const StyledFrame1 = styled.div`
             right: -100px;
             top: 100px;
 
-            @media (max-width: 576px) {
+            @media (max-width: 768px) {
                 left: 0px;
                 top: 0px;
             }

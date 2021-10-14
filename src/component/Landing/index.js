@@ -9,7 +9,7 @@ import { StyledLanding } from './landing.style';
 function Landing() {
     return (
         <StyledLanding>
-            <Header></Header>
+            <Header data-aos="animation_name"></Header>
             <div>
                 <Frame1></Frame1>
                 <Foundation></Foundation>
