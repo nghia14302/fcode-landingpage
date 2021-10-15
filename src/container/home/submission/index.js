@@ -25,7 +25,7 @@ const data = [
         time: 'Thời gian: 21/9 - 24/10',
         description: 'Thử thách sẽ được bật mí vào ngày 1/10',
         button: 'Chi tiết',
-        enable: true,
+        enable: false,
     },
     {
         icon: 'flag.svg',
@@ -51,7 +51,9 @@ const Submission = () => {
             <StageInviteBackground />
             <SubmitContainer>
                 <DescriptionContainer>
-                    <Title data-aos="fade-left">Giai Đoạn Tuyển Chọn</Title>
+                    <Title data-aos="fade-left" data-aos-anchor="bottom-bottom">
+                        Giai Đoạn Tuyển Chọn
+                    </Title>
                     <Description data-aos="fade-left">
                         Để trở thành thành viên chính thức của FCode, các bạn phải trải qua 4 giai
                         chính

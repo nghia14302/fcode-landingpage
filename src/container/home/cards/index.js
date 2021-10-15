@@ -12,18 +12,18 @@ const data = [
     },
     {
         icon: 'book.svg',
-        title: 'Nhiệt Huyết',
-        description: 'Nhiệt huyết tham gia các hoạt động, cống hiến hết mình vì CLB',
+        title: 'Chia Sẽ',
+        description: 'Có tinh thần học hỏi, sẵn sàng chia sẻ kiến thức tới mọi người',
     },
     {
         icon: 'hand.svg',
-        title: 'Nhiệt Huyết',
-        description: 'Nhiệt huyết tham gia các hoạt động, cống hiến hết mình vì CLB',
+        title: 'Tôn Trọng',
+        description: 'Sẵn sàng giúp đỡ và tôn trọng các thành viên trong CLB',
     },
     {
         icon: 'person.svg',
-        title: 'Nhiệt Huyết',
-        description: 'Nhiệt huyết tham gia các hoạt động, cống hiến hết mình vì CLB',
+        title: 'Trách Nhiệm',
+        description: 'Có trách nhiệm, dám thử thách bản thân, kiên trì, không bỏ cuộc',
     },
 ];
 

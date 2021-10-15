@@ -7,10 +7,10 @@ export const StageInviteBackground = styled.div`
     background-color: rgba(0, 219, 150, 0.03); /* green light */
     top: -254px;
     width: 100%;
-    height: 1560px;
+    height: 1580px;
     @media screen and (max-width: 720px) {
         width: 100%;
-        height: 2400px;
+        height: 2000px;
     }
 `;
 
@@ -41,7 +41,7 @@ export const Stick = styled.div`
     background: #c4c4c4; /* gray light */
     width: 14px;
     height: 796px;
-    bottom: -100px;
+    bottom: -90px;
     left: 115px;
     z-index: -1;
     @media screen and (max-width: 1270px) {

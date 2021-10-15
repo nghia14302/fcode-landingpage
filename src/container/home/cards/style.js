@@ -6,7 +6,11 @@ export const Spirit = styled.div`
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    padding: 2rem 0;
+    padding: 4rem 0;
+    @media screen and (max-width: 560px) {
+        font-size: 12px;
+        padding: 2rem 0;
+    }
 `;
 
 export const CardsContainer = styled.div`

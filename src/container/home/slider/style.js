@@ -4,8 +4,8 @@ import arrows from '../../../assets/components';
 import { Content } from '../style';
 
 export const Activities = styled.div`
-    max-width: 100%;
-    height: 80%;
+    width: 100%;
+    margin: 4rem 0;
 `;
 
 export const ContentsContainer = styled(Content)`
@@ -16,6 +16,7 @@ export const ContentsContainer = styled(Content)`
         padding: 0 4rem;
     }
     @media screen and (max-width: 560px) {
+        font-size: 12px;
         padding: 0 1.4rem;
     }
 `;
@@ -32,7 +33,7 @@ export const SubTitle = styled.h6`
     font-family: 'Roboto', 'sans-serif';
     font-style: normal;
     font-weight: bold;
-    font-size: 2.25rem;
+    font-size: 2.25em;
     line-height: 42px;
     letter-spacing: 1.25px;
     width: fit-content;
@@ -44,16 +45,17 @@ export const SubTitle = styled.h6`
 
 export const SliderContainer = styled.div`
     position: relative;
-    margin: 0 auto 2.31rem;
-    max-width: 1245px;
+    margin: 0 auto 2.31em;
+    max-width: 1235px;
     @media screen and (max-width: 1440px) {
         width: 900px;
     }
     @media screen and (max-width: 1000px) {
         width: 430px;
     }
-    @media screen and (max-width: 600px) {
-        width: 380px;
+    @media screen and (max-width: 560px) {
+        width: 330px;
+        overflow-x: hidden;
     }
 `;
 
@@ -64,9 +66,9 @@ export const Item = styled.img`
     background-size: contain;
     width: 403px;
     height: 294px;
-    @media screen and (max-width: 610px) {
-        width: 360px;
-        height: 262px;
+    @media screen and (max-width: 560px) {
+        width: 310px;
+        height: 226px;
     }
 `;
 export const SlideArrow = styled.div`
@@ -106,7 +108,7 @@ export const LeftArrow = styled(SlideArrow)`
 `;
 
 export const RightArrow = styled(SlideArrow)`
-    right: 25px;
+    right: 20px;
     z-index: 999;
     &::before {
         background: url(${arrows['right-arrow.svg']});
@@ -117,7 +119,7 @@ export const RightArrow = styled(SlideArrow)`
         right: 30px;
     }
     @media screen and (max-width: 320px) {
-        right: 0px;
+        right: 15px;
     }
 `;
 
@@ -125,7 +127,7 @@ export const MoreInfo = styled.a`
     position: relative;
     display: inline-block;
     font-family: 'Roboto', 'sans-serif';
-    font-size: 1.5rem;
+    font-size: 1.5em;
     line-height: 120%;
     color: #00d17d; /* green */
     width: fit-content;
@@ -144,6 +146,9 @@ export const MoreInfo = styled.a`
         height: 12px;
         right: -15px;
         top: 9px;
+        @media screen and (max-width: 560px) {
+            top: 4px;
+        }
     }
     &::before {
         position: absolute;
