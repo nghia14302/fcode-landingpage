@@ -108,7 +108,7 @@ export const BigCircle = styled.div`
 export const SmallCircle = styled.div`
     position: absolute;
     width: 172px;
-    height: 172px};
+    height: 172px;
     background: #00d17d;
     border-radius: 100%;
     right: 350px;
@@ -176,7 +176,6 @@ export const TrainCDetail = styled.p`
 export const TrainCBotPic = styled.div`
     display: flex;
     margin-top: auto;
-    height: 100%;
     @media only screen and (max-width: 1040px) {
         margin: auto;
     }
