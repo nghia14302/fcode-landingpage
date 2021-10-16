@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-import Activities from './container/activities';
+import AOS from 'aos';
+
+import { FAQ } from './container';
+
+import 'aos/dist/aos.css';
 
 function App() {
-    return <Activities></Activities>;
+    useEffect(() => {
+        AOS.init({
+            duration: 2000,
+        });
+    }, []);
+
+    return <FAQ></FAQ>;
 }
 
 export default App;
