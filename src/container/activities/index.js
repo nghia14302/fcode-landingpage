@@ -14,8 +14,8 @@ import {
     Pic9,
     Pic10,
 } from '../../assets/img/activities';
-// import NavBar from '../../component/navbar';
-// import Footer from '../../component/footer';
+import Footer from '../Footer';
+import Header from '../Header';
 import {
     SectionWrapper,
     TopContainer,
@@ -66,6 +66,7 @@ const Activities = () => {
     AOS.init({ duration: 1200 });
     return (
         <SectionWrapper>
+            <Header />
             {/* <NavBar /> */}
             <TopContainer>
                 <PageTitle>
@@ -160,8 +161,7 @@ const Activities = () => {
                     </MoreThingsText>
                 </MoreThings>
             </BottomContainer>
-
-            {/* <Footer /> */}
+            <Footer />
         </SectionWrapper>
     );
 };

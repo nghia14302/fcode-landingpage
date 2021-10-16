@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Landing from './container';
+import Home from './container';
 
 function App() {
-    return <Landing />;
+    return <Home />;
 }
 
 export default App;

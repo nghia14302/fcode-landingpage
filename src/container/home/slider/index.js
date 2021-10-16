@@ -76,9 +76,7 @@ const Slider = () => {
                             })}
                         </Carousel>
                     </SliderContainer>
-                    <MoreInfo data-aos="fade-right" data-aos-delay="500">
-                        Xem Thêm
-                    </MoreInfo>
+                    <MoreInfo data-aos="fade-right">Xem Thêm</MoreInfo>
                 </SliderContent>
             </ContentsContainer>
         </Activities>

@@ -78,7 +78,7 @@ const Submission = () => {
                         );
                     })}
                 </StageIntroduction>
-                <Stick />
+                <Stick data-aos="fade-up" data-aos-delay="200" />
             </SubmitContainer>
         </StageInvite>
     );

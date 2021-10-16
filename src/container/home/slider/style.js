@@ -54,7 +54,7 @@ export const SliderContainer = styled.div`
         width: 430px;
     }
     @media screen and (max-width: 560px) {
-        width: 330px;
+        width: auto;
         overflow-x: hidden;
     }
 `;
@@ -66,9 +66,11 @@ export const Item = styled.img`
     background-size: contain;
     width: 403px;
     height: 294px;
+    margin: 0.5rem;
     @media screen and (max-width: 560px) {
-        width: 310px;
-        height: 226px;
+        margin: 0;
+        width: 100%;
+        height: auto;
     }
 `;
 export const SlideArrow = styled.div`
@@ -98,12 +100,15 @@ export const SlideArrow = styled.div`
 `;
 
 export const LeftArrow = styled(SlideArrow)`
-    left: 5px;
+    left: 15px;
     z-index: 999;
     &::before {
         background: url(${arrows['left-arrow.svg']});
         background-repeat: no-repeat;
         background-size: stretch;
+    }
+    @media screen and (max-width: 520px) {
+        display: none;
     }
 `;
 
@@ -116,10 +121,13 @@ export const RightArrow = styled(SlideArrow)`
         background-size: stretch;
     }
     @media screen and (max-width: 1440px) {
-        right: 30px;
+        right: 45px;
     }
-    @media screen and (max-width: 320px) {
-        right: 15px;
+    @media screen and (max-width: 1000px) {
+        right: 25px;
+    }
+    @media screen and (max-width: 520px) {
+        display: none;
     }
 `;
 
