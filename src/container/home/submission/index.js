@@ -24,6 +24,8 @@ const data = [
         title: 'Thử thách thứ nhất',
         time: 'Thời gian: 21/9 - 24/10',
         description: 'Thử thách sẽ được bật mí vào ngày 1/10',
+        details:
+            'Ở thử thách đầu tiên các bạn hãy tạo một bản CV ghi đầy đủ những thông tin của bản thân và gửi về mail CLB: Fcodemail@gmail.com',
         button: 'Chi tiết',
         enable: true,
     },
@@ -66,6 +68,7 @@ const Submission = () => {
                                 key={index + 'submission'}
                                 icon={item.icon}
                                 description={item.description}
+                                details={item.details}
                                 time={item.time}
                                 title={item.title}
                                 enable={item.enable}

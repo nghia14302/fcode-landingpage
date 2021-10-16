@@ -1,3 +1,4 @@
+import Popup from 'reactjs-popup';
 import styled from 'styled-components';
 
 export const ItemsContainer = styled.div`
@@ -74,11 +75,10 @@ export const DescriptionContainer = styled.div`
         height: fit-content;
     }
 `;
-
 export const FormTitle = styled.h6`
     font-family: 'Roboto', 'sans-serif';
     font-weight: 500;
-    font-size: 1.5rem;
+    font-size: ${(props) => props.fontsize};
     color: ${(props) =>
         props.enable ? '#00d17d' : 'rgba(0, 0, 0, 0.38)'}; /* green  and light gray */
     line-height: 120%;
@@ -88,7 +88,7 @@ export const FormTitle = styled.h6`
 export const FormTime = styled.p`
     font-family: 'Roboto', 'sans-serif';
     font-weight: 500;
-    font-size: 1.125rem;
+    font-size: ${(props) => props.fontsize};
     color: rgba(0, 0, 0, 0.6); /* gray */
     line-height: 120%;
     margin-bottom: 10px;
@@ -96,8 +96,13 @@ export const FormTime = styled.p`
 
 export const FormDescription = styled.p`
     font-family: 'Roboto', 'sans-serif';
-    font-size: 1.125rem;
+    font-size: ${(props) => props.fontsize};
     color: rgba(0, 0, 0, 0.6);
+    margin: 1rem 0;
+`;
+
+export const FormSubtitle = styled(FormDescription)`
+    font-weight: bold;
 `;
 
 export const FormButton = styled.button`
@@ -123,5 +128,45 @@ export const FormButton = styled.button`
     }
     @media screen and (max-width: 520px) {
         display: ${(props) => (props.enable ? 'block' : 'none')};
+    }
+`;
+
+export const StyledPopup = styled(Popup)`
+    &-content {
+        background-color: transparent;
+        border: none;
+        @media screen and (max-width: 600px) {
+            width: 80%;
+        }
+    }
+`;
+
+export const PopupContainer = styled.div`
+    background-color: white;
+    max-width: 580px;
+    padding: 3.3363rem 4.25rem;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198),
+        0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275),
+        0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035),
+        0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725),
+        0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+    border-radius: 12px;
+    @media screen and (max-width: 600px) {
+        font-size: 12px;
+        padding: 20px;
+    }
+`;
+
+export const PopupAction = styled.div`
+    width: 100%;
+    overflow: hidden;
+    ::after {
+        content: '';
+        clear: both;
+        display: table;
+    }
+    ${FormButton} {
+        float: right;
     }
 `;

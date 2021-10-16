@@ -11,7 +11,7 @@ const LandingPage = () => {
             <Route exact path="/">
                 <Home />
             </Route>
-            <Route path="/activities">
+            <Route exact path="/activities">
                 <Activities />
             </Route>
             <Redirect to="/" />
