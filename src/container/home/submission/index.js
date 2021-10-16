@@ -25,7 +25,7 @@ const data = [
         time: 'Thời gian: 21/9 - 24/10',
         description: 'Thử thách sẽ được bật mí vào ngày 1/10',
         button: 'Chi tiết',
-        enable: false,
+        enable: true,
     },
     {
         icon: 'flag.svg',
