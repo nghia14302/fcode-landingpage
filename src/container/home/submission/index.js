@@ -27,7 +27,7 @@ const data = [
         details:
             'Ở thử thách đầu tiên các bạn hãy tạo một bản CV ghi đầy đủ những thông tin của bản thân và gửi về mail CLB: Fcodemail@gmail.com',
         button: 'Chi tiết',
-        enable: true,
+        enable: false,
     },
     {
         icon: 'flag.svg',
