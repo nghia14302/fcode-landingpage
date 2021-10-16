@@ -1,19 +1,10 @@
-import React, { useEffect } from 'react';
-
-import AOS from 'aos';
+import React from 'react';
 
 import AboutFound from '../AboutFound';
 import FoundLogo from '../FoundLogo';
 import { StyledFoundation, Left, Right } from './foundation.style';
 
-import 'aos/dist/aos.css';
-
 const Foundation = () => {
-    useEffect(() => {
-        AOS.init({
-            duration: 2000,
-        });
-    }, []);
     return (
         <StyledFoundation>
             <Left data-aos="fade-up">

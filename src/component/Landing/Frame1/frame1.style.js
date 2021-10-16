@@ -12,10 +12,6 @@ const View = styled.div`
     padding: 160px 0px;
     position: relative;
 
-    @media (max-width: 576px) {
-        grid-template-columns: 4fr 1fr;
-    }
-
     > object {
         position: absolute;
         right: -100px;

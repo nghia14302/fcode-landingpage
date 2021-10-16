@@ -1,18 +1,9 @@
-import React, { useEffect } from 'react';
-
-import AOS from 'aos';
+import React from 'react';
 
 import FilledButton from '../FilledButton';
 import { StyledAbout, LText, SText, BtnContainer } from './about.style';
 
-import 'aos/dist/aos.css';
-
 const About = () => {
-    useEffect(() => {
-        AOS.init({
-            duration: 2000,
-        });
-    }, []);
     return (
         <StyledAbout>
             <div data-aos="fade-up">

@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-import Landing from './component/Landing';
+import AOS from 'aos';
+
+import { Landing, FAQ } from './component';
+
+import 'aos/dist/aos.css';
 
 function App() {
-    return <Landing />;
+    useEffect(() => {
+        AOS.init({
+            duration: 2000,
+        });
+    }, []);
+
+    return <FAQ></FAQ>;
 }
 
 export default App;
