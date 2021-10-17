@@ -167,6 +167,10 @@ export const SubmitButton = styled.button`
     color: white;
     border: none;
     cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+        filter: brightness(95%);
+    }
 `;
 
 export const ImageContainer = styled.div`

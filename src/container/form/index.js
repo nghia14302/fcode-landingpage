@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Image from '../../assets/form/bg.png';
 import {
@@ -25,7 +25,29 @@ import {
     SubmitButton,
 } from './style.js';
 
+const initialFormData = Object.freeze({
+    lname: '',
+    fname: '',
+    spec: '',
+    id: '',
+    sem: '',
+    phone: '',
+    confirm: false,
+});
+
 const Form = () => {
+    const [submit, setSubmit] = useState(initialFormData);
+    const handleChange = (e) => {
+        setSubmit({
+            ...submit,
+            [e.target.name]:
+                e.target.type === 'checkbox' ? e.target.checked : e.target.value.trim(),
+        });
+    };
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        //submit to BE here
+    };
     return (
         <SectionWrapper>
             <FormContainer>
@@ -42,19 +64,19 @@ const Form = () => {
                         <NameInput>
                             <InputSmallLeft
                                 type="text"
-                                id="lname"
-                                name="lastname"
+                                name="lname"
                                 placeholder="Nhập tên của bạn"
+                                onChange={(e) => handleChange(e)}
                             ></InputSmallLeft>
                             <InputSmall
                                 type="text"
-                                id="fname"
-                                name="firstname"
+                                name="fname"
                                 placeholder="Nhập họ của bạn"
+                                onChange={(e) => handleChange(e)}
                             ></InputSmall>
                         </NameInput>
                         <Label htmlFor="spec">Ngành học</Label>
-                        <Select id="spec" name="spec">
+                        <Select id="spec" name="spec" onChange={(e) => handleChange(e)}>
                             <Option value="Kĩ thuật phần mềm">Kĩ thuật phần mềm</Option>
                             <Option value="Trí tuệ nhân tạo">Trí tuệ nhân tạo</Option>
                             <Option value="An toàn thông tin">An toàn thông tin</Option>
@@ -83,13 +105,14 @@ const Form = () => {
                                 <InputSmallLeft
                                     type="text"
                                     id="studentId"
-                                    name="studentId"
+                                    name="id"
                                     placeholder="SE170000"
+                                    onChange={(e) => handleChange(e)}
                                 ></InputSmallLeft>
                             </FormLineWrap>
                             <FormLineWrap>
                                 <Label htmlFor="sem">Kì học hiện tại</Label>
-                                <SmallSelect id="sem">
+                                <SmallSelect id="sem" name="sem" onChange={(e) => handleChange(e)}>
                                     <Option value="LUK1">LUK1</Option>
                                     <Option value="LUK2">LUK2</Option>
                                     <Option value="LUK3">LUK3</Option>
@@ -101,11 +124,23 @@ const Form = () => {
                             </FormLineWrap>
                         </OptionContainer>
                         <Label>Số điện thoại</Label>
-                        <Input type="tel" id="phone" name="phone" placeholder="0987654321"></Input>
-                        <CheckBox type="checkbox" id="confirm" name="confirm"></CheckBox>
+                        <Input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="0987654321"
+                            onChange={(e) => handleChange(e)}
+                        ></Input>
+                        <CheckBox
+                            type="checkbox"
+                            id="confirm"
+                            name="confirm"
+                            checked={submit.confirm}
+                            onChange={(e) => handleChange(e)}
+                        ></CheckBox>
                         <Label htmlFor="confirm">Tôi đồng ý tham gia thử thách của CLB FCode</Label>
                     </FormWrap>
-                    <SubmitButton>ĐẮNG KÍ</SubmitButton>
+                    <SubmitButton onClick={(e) => handleSubmit(e)}>ĐẮNG KÍ</SubmitButton>
                 </FormContent>
                 <ImageContainer>
                     <FormImage src={Image} draggable="false"></FormImage>
