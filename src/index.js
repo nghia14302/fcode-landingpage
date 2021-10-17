@@ -8,7 +8,7 @@ import './index.css';
 
 ReactDOM.render(
     <React.StrictMode>
-        <BrowserRouter forceRefresh={true}>
+        <BrowserRouter forceRefresh={false}>
             <App />
         </BrowserRouter>
     </React.StrictMode>,

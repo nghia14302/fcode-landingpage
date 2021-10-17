@@ -14,8 +14,6 @@ import {
     Pic9,
     Pic10,
 } from '../../assets/img/activities';
-import Footer from '../Footer';
-import Header from '../Header';
 import {
     SectionWrapper,
     TopContainer,
@@ -66,8 +64,6 @@ const Activities = () => {
     AOS.init({ duration: 1200 });
     return (
         <SectionWrapper>
-            <Header />
-            {/* <NavBar /> */}
             <TopContainer>
                 <PageTitle>
                     <PageRow>
@@ -161,7 +157,6 @@ const Activities = () => {
                     </MoreThingsText>
                 </MoreThings>
             </BottomContainer>
-            <Footer />
         </SectionWrapper>
     );
 };

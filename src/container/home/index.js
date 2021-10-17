@@ -2,8 +2,6 @@ import React from 'react';
 
 import AOS from 'aos';
 
-import Footer from '../Footer';
-import Header from '../Header';
 import Landing from './Landing';
 import Cards from './cards';
 import Slider from './slider';
@@ -31,12 +29,10 @@ AOS.init({
 const Home = () => {
     return (
         <HomeContainer>
-            <Header />
             <Landing />
             <Slider />
             <Cards />
             <Submission />
-            <Footer />
         </HomeContainer>
     );
 };
