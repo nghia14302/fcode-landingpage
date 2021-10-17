@@ -1,7 +1,5 @@
 import React from 'react';
 
-import AOS from 'aos';
-
 import {
     Pic1,
     Pic2,
@@ -61,7 +59,6 @@ import {
 import 'aos/dist/aos.css';
 
 const Activities = () => {
-    AOS.init({ duration: 1200 });
     return (
         <SectionWrapper>
             <TopContainer>
