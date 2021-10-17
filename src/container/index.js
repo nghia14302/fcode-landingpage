@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import AOS from 'aos';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Switch, Redirect, useLocation } from 'react-router-dom';
 
 import Footer from './Footer';
 import Header from './Header';
@@ -26,6 +26,11 @@ AOS.init({
 });
 
 const LandingPage = () => {
+    const location = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location]);
     return (
         <React.Fragment>
             <Header />

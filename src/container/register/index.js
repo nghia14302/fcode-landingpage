@@ -2,12 +2,12 @@ import React from 'react';
 
 import icons from '../../assets/icons';
 import background from '../../assets/img/register/Frame.svg';
+import ProgressBar from './progress';
 import {
     RegisterContainer,
     RegisterContent,
     Title,
     Description,
-    ProgressBar,
     GoogleButton,
     Icon,
     GoogleIcon,
@@ -15,7 +15,6 @@ import {
 } from './style';
 
 const Register = () => {
-    const progress = 1;
     return (
         <RegisterContainer>
             <Background src={background}>
@@ -28,7 +27,7 @@ const Register = () => {
                         Để trở thành thành viên đầu tiên của FCode, trước hết các bạn phải đăng kí
                         tài khoản qua Gmail FPT
                     </Description>
-                    <ProgressBar progress={progress} />
+                    <ProgressBar progress={'1'} />
                     <GoogleButton>
                         <Icon>
                             <GoogleIcon src={icons['google.svg']} />

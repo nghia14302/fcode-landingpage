@@ -10,7 +10,7 @@ const StyledFooter = styled.div`
     margin: 4rem;
     overflow-x: hidden;
     @media (max-width: 768px) {
-        margin: 6rem 0;
+        margin: 4rem 0;
         padding: 1rem;
         width: 100%;
     }

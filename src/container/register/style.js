@@ -26,7 +26,6 @@ export const Background = styled.div`
     grid-column: 1 / 1;
     width: 100%;
     height: 100%;
-    z-index: -1;
 `;
 // content components
 export const RegisterContent = styled.div`
@@ -41,6 +40,7 @@ export const RegisterContent = styled.div`
     height: 100%;
     @media only screen and (max-width: 1024px) {
         font-size: 10px;
+        padding: 0;
     }
 `;
 
@@ -51,12 +51,18 @@ export const Title = styled.h2`
     > span {
         color: rgba(0, 219, 150, 1);
     }
+    @media screen and (max-width: 420px) {
+        margin: 1rem;
+    }
 `;
 
 export const Description = styled.p`
     font-size: 1.5em;
     max-width: 579px;
-    margin-bottom: 3.125em;
+    margin-bottom: max(2.5em);
+    @media screen and (max-width: 420px) {
+        margin: 1rem;
+    }
 `;
 
 export const ProgressBar = styled.div``;
@@ -73,8 +79,8 @@ export const GoogleButton = styled.button`
     border: none;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
     border-radius: 6px;
-    transition: all 0.3s ease-in-out;
-
+    transition: all 0.175s ease-in-out;
+    cursor: pointer;
     :hover {
         transform: translate(0, 2px);
         box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
