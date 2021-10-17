@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const HomeContainer = styled.div`
     position: relative;
     display: block;
-    height: 100vh;
 `;
 export const Content = styled.div`
     display: flex;

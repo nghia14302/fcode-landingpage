@@ -26,7 +26,8 @@ const ButtonBackwardAnim = keyframes`
 `;
 
 const StyledBlankButton = styled.div`
-    height: 48px;
+    position: relative;
+    height: 36px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
@@ -35,7 +36,7 @@ const StyledBlankButton = styled.div`
     align-items: center;
     text-align: center;
     letter-spacing: 1.25px;
-    color: ${(props) => props.color};
+    color: rgba(0, 0, 0, 0.36);
     position: relative;
     cursor: pointer;
     user-select: none;
@@ -43,15 +44,22 @@ const StyledBlankButton = styled.div`
     &:after {
         content: '';
         position: absolute;
-        height: 2px;
-        bottom: 5px;
+        height: 1px;
+        bottom: 2px;
         width: 0px;
         animation-name: ${ButtonBackwardAnim};
         animation-duration: 0.4s;
         background-color: #0000005c;
     }
 
+    :link,
+    :hover,
+    :visited,
+    :active {
+        color: #00d17d;
+    }
     &:hover:after {
+        background-color: #00d17d;
         animation: ${ButtonFowardAnim} 0.7s;
         animation-fill-mode: forwards;
     }
