@@ -2,7 +2,8 @@ import React from 'react';
 
 import BlankButton from '../BlankButton';
 import FilledButton from '../FilledButton';
-import { StyledNavBar, NavLink } from './navBar.style';
+import { NavLink } from '../header.style';
+import { StyledNavBar } from './navBar.style';
 
 const NavBar = () => {
     return (
@@ -19,7 +20,9 @@ const NavBar = () => {
             <NavLink to="/faq">
                 <BlankButton>FAQ</BlankButton>
             </NavLink>
-            <FilledButton>ĐĂNG KÍ</FilledButton>
+            <NavLink to="/register">
+                <FilledButton>ĐĂNG KÍ</FilledButton>
+            </NavLink>
         </StyledNavBar>
     );
 };

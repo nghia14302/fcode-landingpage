@@ -41,6 +41,9 @@ const XSText = styled.div`
     font-weight: 400;
     line-height: 16px;
     color: #00000099;
+    > a {
+        font-weight: bold;
+    }
 `;
 
 export { StyledFooter, LText, SText, XSText };

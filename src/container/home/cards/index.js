@@ -12,7 +12,7 @@ const data = [
     },
     {
         icon: 'book.svg',
-        title: 'Chia Sẽ',
+        title: 'Chia Sẻ',
         description: 'Có tinh thần học hỏi, sẵn sàng chia sẻ kiến thức tới mọi người',
     },
     {

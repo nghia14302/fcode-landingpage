@@ -2,6 +2,7 @@ import React from 'react';
 
 import icons from '../../assets/icons';
 import background from '../../assets/img/register/Frame.svg';
+import { get } from './../../utils/apiCaller';
 import ProgressBar from './progress';
 import {
     RegisterContainer,
@@ -15,6 +16,10 @@ import {
 } from './style';
 
 const Register = () => {
+    const getData = () => {
+        get('/auth/google');
+    }
+
     return (
         <RegisterContainer>
             <Background src={background}>
@@ -28,7 +33,7 @@ const Register = () => {
                         tài khoản qua Gmail FPT
                     </Description>
                     <ProgressBar progress={'1'} />
-                    <GoogleButton>
+                    <GoogleButton onClick={getData()}>
                         <Icon>
                             <GoogleIcon src={icons['google.svg']} />
                         </Icon>
