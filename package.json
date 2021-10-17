@@ -1,5 +1,6 @@
 {
   "name": "fcode-landingpage",
+  "homepage": "http://fcode.tech",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
