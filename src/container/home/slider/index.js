@@ -12,6 +12,7 @@ import {
     MoreInfo,
     SubTitle,
     SliderContent,
+    NavLink,
     ContentsContainer,
 } from './style';
 
@@ -76,7 +77,9 @@ const Slider = () => {
                             })}
                         </Carousel>
                     </SliderContainer>
-                    <MoreInfo data-aos="fade-right">Xem Thêm</MoreInfo>
+                    <MoreInfo data-aos="fade-right">
+                        <NavLink to="/activities">Xem thêm</NavLink>
+                    </MoreInfo>
                 </SliderContent>
             </ContentsContainer>
         </Activities>

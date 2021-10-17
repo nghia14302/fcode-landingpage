@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 import arrows from '../../../assets/components';
@@ -175,5 +176,14 @@ export const MoreInfo = styled.a`
         &::after {
             right: -20px;
         }
+    }
+`;
+export const NavLink = styled(Link)`
+    text-decoration: none;
+    color: #00d17d;
+    :visited,
+    :active {
+        text-decoration: none;
+        color: #00d17d;
     }
 `;
