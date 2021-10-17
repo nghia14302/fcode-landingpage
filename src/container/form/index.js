@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import Image from '../../assets/form/bg.png';
+import Popup from './popup';
 import {
     SectionWrapper,
     FormContainer,
@@ -28,14 +29,15 @@ import {
 const initialFormData = Object.freeze({
     lname: '',
     fname: '',
-    spec: '',
+    spec: 'Kĩ thuật phần mềm',
     id: '',
-    sem: '',
+    sem: 'LUK1',
     phone: '',
     confirm: false,
 });
 
 const Form = () => {
+    const [popupSpec, setPopupSpec] = useState({ isShowing: false, type: '' });
     const [submit, setSubmit] = useState(initialFormData);
     const handleChange = (e) => {
         setSubmit({
@@ -46,7 +48,14 @@ const Form = () => {
     };
     const handleSubmit = (e) => {
         e.preventDefault();
-        //submit to BE here
+        if (submit.lname === '' || submit.id === '' || submit.fname === '' || submit.phone === '') {
+            setPopupSpec({ isShowing: true, type: 'missing' });
+        } else if (!submit.confirm) {
+            setPopupSpec({ isShowing: true, type: 'notConfirmed' });
+        } else {
+            setPopupSpec({ isShowing: true, type: 'success' });
+            //submit to BE here
+        }
     };
     return (
         <SectionWrapper>
@@ -146,6 +155,12 @@ const Form = () => {
                     <FormImage src={Image} draggable="false"></FormImage>
                 </ImageContainer>
             </FormContainer>
+            {popupSpec.isShowing ? (
+                <Popup
+                    type={popupSpec.type}
+                    close={() => setPopupSpec({ isShowing: false, type: '' })}
+                />
+            ) : null}
         </SectionWrapper>
     );
 };
