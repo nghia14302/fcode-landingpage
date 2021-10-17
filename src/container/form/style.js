@@ -11,7 +11,6 @@ export const FormContainer = styled.div`
 
 export const FormContent = styled.div`
     width: 450px;
-    height: 700px;
     align-items: center;
     margin: auto;
 `;
@@ -127,6 +126,7 @@ export const Select = styled.select`
     width: 448px;
     height: 56px;
     padding-left: 15px;
+    padding-right: 15px;
     outline: none;
     border: 1px solid rgba(0, 0, 0, 0.36);
     margin-bottom: 20px;
@@ -137,9 +137,12 @@ export const Option = styled.option`
 `;
 
 export const SmallSelect = styled.select`
+    outline: none;
     width: 211px;
     height: 56px;
     border: 1px solid rgba(0, 0, 0, 0.36);
+    padding-left: 15px;
+    padding-right: 15px;
 `;
 
 export const SmallOption = styled.option``;
@@ -169,7 +172,7 @@ export const SubmitButton = styled.button`
 export const ImageContainer = styled.div`
     margin-top: auto;
     flex: 0 0 50%;
-    @media (max-width: 1024px) {
+    @media (max-width: 1200px) {
         display: none;
     }
 `;
