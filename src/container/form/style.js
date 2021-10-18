@@ -1,12 +1,17 @@
 import styled from 'styled-components';
 
-export const SectionWrapper = styled.div``;
+export const SectionWrapper = styled.div`
+    overflow-x: hidden;
+`;
 
 export const FormContainer = styled.div`
     padding-top: 100px;
     width: 100%;
     min-height: 100vh;
-    display: flex;
+    display: grid;
+    gap: 25px;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
 `;
 
 export const FormContent = styled.div`
@@ -174,14 +179,15 @@ export const SubmitButton = styled.button`
 `;
 
 export const ImageContainer = styled.div`
+    position: absolute;
     margin-top: auto;
-    flex: 0 0 50%;
+    right: 0;
     @media (max-width: 1200px) {
         display: none;
     }
 `;
 
-export const FormImage = styled.img`
+export const FormImage = styled.object`
     width: 100%;
     height: 100%;
 `;

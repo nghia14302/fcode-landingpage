@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 import { useHistory } from 'react-router-dom';
 
-import Image from '../../assets/form/bg.png';
+import background from '../../assets/form/Frame.svg';
 import { put } from '../../utils/ApiCaller';
 import Popup from './popup';
 import {
@@ -43,6 +43,7 @@ const Form = () => {
     const [popupSpec, setPopupSpec] = useState({ isShowing: false, type: '' });
     const [submit, setSubmit] = useState(initialFormData);
     const history = useHistory();
+    const svg = useRef();
     const handleChange = (e) => {
         setSubmit({
             ...submit,
@@ -62,6 +63,43 @@ const Form = () => {
         }
         await put('/api/students', {
             student: submit,
+        });
+    };
+
+    const animate = () => {
+        const img = svg.current.contentDocument;
+        let paths = img.querySelectorAll('path');
+        [...paths].forEach((item) => {
+            item.style.strokeDasharray = item.getTotalLength();
+            item.style.fillOpacity = 0;
+            item.style.strokeWidth = '0.5px';
+            item.animate(
+                [
+                    {
+                        strokeDashoffset: item.getTotalLength(),
+                        stroke: '#333',
+                        fillOpacity: 0,
+                    },
+                    {
+                        strokeDashoffset: 0,
+                        stroke: '#333',
+                        fillOpacity: 0,
+                    },
+                    {
+                        stroke: 'white',
+                        fillOpacity: '0.5',
+                    },
+                    {
+                        stroke: 'white',
+                        fillOpacity: '1',
+                    },
+                ],
+                {
+                    duration: 4000,
+                    fill: 'forwards',
+                    easing: 'linear',
+                }
+            );
         });
     };
     return (
@@ -166,7 +204,12 @@ const Form = () => {
                     <SubmitButton onClick={(e) => handleSubmit(e)}>ĐẮNG KÍ</SubmitButton>
                 </FormContent>
                 <ImageContainer>
-                    <FormImage src={Image} draggable="false"></FormImage>
+                    <FormImage
+                        data={background}
+                        ref={svg}
+                        onLoad={animate}
+                        area-label="sheild"
+                    ></FormImage>
                 </ImageContainer>
             </FormContainer>
         </SectionWrapper>
