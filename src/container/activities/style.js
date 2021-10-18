@@ -238,6 +238,9 @@ export const TBHead = styled.h2`
     @media only screen and (max-width: 1240px) {
         font-size: 5vw;
     }
+    @media only screen and (min-width: 768px) {
+        margin-bottom: 30px;
+    }
 `;
 
 export const TBDetail = styled.p`
