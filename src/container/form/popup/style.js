@@ -2,13 +2,15 @@ import styled from 'styled-components';
 
 export const PopupOverlay = styled.div`
     position: fixed;
-    width: 100vw;
-    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
     z-index: 99;
 `;
 export const Box = styled.div`
-    position: fixed;
     width: 450px;
     height: 200px;
     background: #ffffff;
@@ -18,7 +20,7 @@ export const Box = styled.div`
     border-radius: 12px;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    margin: auto;
 `;
 
 export const Content = styled.div`

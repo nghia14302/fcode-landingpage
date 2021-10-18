@@ -50,7 +50,7 @@ const Popup = (props) => {
     return (
         <PopupOverlay>
             <Overlay onClick={props.close}></Overlay>
-            <Box>{renderSwitch(props.type)}</Box>
+            <Box data-aos="fade-down">{renderSwitch(props.type)}</Box>
         </PopupOverlay>
     );
 };
