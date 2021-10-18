@@ -45,6 +45,8 @@ const Popup = (props) => {
                 return <NotConfirmed close={props.close}></NotConfirmed>;
             case 'success':
                 return <Success close={props.redirect}></Success>;
+            default:
+                return null;
         }
     };
     return (
