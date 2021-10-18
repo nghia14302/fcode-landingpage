@@ -2,8 +2,7 @@ import React, { useRef, useState } from 'react';
 
 import { useHistory } from 'react-router-dom';
 
-import background from '../../assets/form/Frame.svg';
-import { put } from '../../utils/ApiCaller';
+import { put } from '../../utils/Apicaller';
 import Popup from './popup';
 import {
     SectionWrapper,
@@ -59,11 +58,10 @@ const Form = () => {
             setPopupSpec({ isShowing: true, type: 'notConfirmed' });
         } else {
             setPopupSpec({ isShowing: true, type: 'success' });
-            //submit to BE here
+            await put('/api/students', {
+                student: submit,
+            });
         }
-        await put('/api/students', {
-            student: submit,
-        });
     };
 
     const animate = () => {
