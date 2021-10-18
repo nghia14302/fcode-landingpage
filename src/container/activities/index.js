@@ -77,7 +77,9 @@ const Activities = () => {
                                 Đến với FCode các bạn sẽ được tham gia rất nhiều hoạt động bổ ích,
                                 cũng như trau dồi thêm được nhiều kinh nghiệp quý giá
                             </Detail>
-                            <RegisButton data-aos="fade-up">ĐĂNG KÍ</RegisButton>
+                            <a href="/form">
+                                <RegisButton data-aos="fade-up">ĐĂNG KÍ</RegisButton>
+                            </a>
                         </TitleInfo>
                         <CirclesContainer data-aos="fade-left">
                             <CircleWrap>

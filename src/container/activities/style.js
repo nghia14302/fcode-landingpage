@@ -60,15 +60,14 @@ export const Detail = styled.p`
 export const RegisButton = styled.button`
     width: 98px;
     height: 44px;
-    left: calc(50% - 98px / 2);
-    top: 0px;
+    transition: all 0.3s;
     background: #00db96;
     border-radius: 4px;
     border: none;
     color: white;
     cursor: pointer;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    transition: all 0.3s;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12),
+        0px 2px 4px rgba(0, 0, 0, 0.2);
     &:hover {
         filter: brightness(95%);
     }
