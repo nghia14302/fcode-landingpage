@@ -7,7 +7,7 @@ const Collection = () => {
     const questions = [
         {
             question: 'Các tiêu chí để trở thành một thành viên trong câu lạc bộ?',
-            answer: 'Dù đến từ ngành nào bạn cũng có thể tham gia nhé, nếu cảm thấy đây là một môi trường thích hợp cho bạn cùng chia sẻ đam mê lập trình, công nghệ thì F-Code chúng mình luôn chào đón. Nhưng phải vượt qua các thử thách nữa nha.',
+            answer: 'Thái độ tôn trọng mọi người, khả năng tự học và giải quyết vấn đề cũng như kỹ năng làm việc nhóm, biết chia sẻ và không ngại thắc mắc. Kiên trì, sáng tạo và nhiệt huyết.',
         },
         {
             question:
@@ -16,12 +16,12 @@ const Collection = () => {
         },
         {
             question: 'Trình độ anh văn của em kém. Có vào F-Code được không?',
-            answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nisl mauris, posuere quis velit sed, ultrices sollicitudin erat. Aenean nec purus lorem. Donec massa sem, congue at nisl vel.',
+            answer: 'Bạn vẫn có thể tham gia nếu hiện tại tiếng Anh bạn còn kém, nhưng với lĩnh vực công nghệ thì tiếng Anh là một công cụ quan trọng để nghiên cứu và học tập. Nếu bạn giỏi tiếng Anh thì nguồn tài liệu mà bạn tiếp cận được sẽ lớn hơn rất nhiều và đó là một thế mạnh cho bạn sau này.',
         },
         {
             question:
                 'Vào câu lạc bộ em sẽ được những gì và có những hoạt động nào để phát triển hay không?',
-            answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nisl mauris, posuere quis velit sed, ultrices sollicitudin erat. Aenean nec purus lorem. Donec massa sem, congue at nisl vel',
+            answer: 'Lợi thế lớn nhất đó là các bạn có thêm được những mối quan hệ với các bạn khác cũng như những người đi trước để học tập lẫn nhau những điều hay cũng như chia sẻ những kinh nghiệm, chỉ dẫn trong ngành. Thêm vào đó, câu lạc bộ cũng có các hoạt động sharing, training, làm project do các bạn hoặc các anh chị tổ chức để mọi người cùng rèn luyện và học hỏi từ nhau.',
         },
     ];
 
