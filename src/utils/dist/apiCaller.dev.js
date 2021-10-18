@@ -17,7 +17,9 @@ var request = function request(endpoint, method, headers, params, body) {
     method: method,
     headers: Object.assign({}, headers),
     params: Object.assign({}, params),
-    data: body
+    data: body,
+    mode: 'cors',
+    withCredentials: true
   });
 };
 

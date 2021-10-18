@@ -33,7 +33,15 @@ const progress = [
 const Register = () => {
     const [data, setData] = useState({});
     const getData = async () => {
-        let resppone = await get('/auth/google')
+        let respone = await get(
+            '/auth/google',
+            {},
+            {
+                'Access-Control-Allow-Origin': 'https://f-code.tech',
+                'Access-Control-Allow-Headers': 'Content-Type, x-requested-with',
+                'Content-Type': 'application/json',
+            }
+        )
             .then((r) => {
                 setData(r);
                 return r;
@@ -41,7 +49,7 @@ const Register = () => {
             .catch((err) => {
                 console.log(err);
             });
-        console.log(resppone);
+        console.log(respone);
     };
 
     return (
@@ -57,7 +65,7 @@ const Register = () => {
                         tài khoản qua Gmail FPT
                     </Description>
                     <ProgressBar progress={'1'} data={progress} />
-                    <RegisterButton getData={getData} step="3" />
+                    <RegisterButton getData={getData} step="1" />
                 </RegisterContent>
             </Background>
         </RegisterContainer>
