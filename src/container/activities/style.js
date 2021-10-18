@@ -66,6 +66,12 @@ export const RegisButton = styled.button`
     border-radius: 4px;
     border: none;
     color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    &:hover {
+        filter: brightness(95%);
+    }
 `;
 
 export const CirclesContainer = styled.div`
@@ -108,7 +114,7 @@ export const BigCircle = styled.div`
 export const SmallCircle = styled.div`
     position: absolute;
     width: 172px;
-    height: 172px};
+    height: 172px;
     background: #00d17d;
     border-radius: 100%;
     right: 350px;
@@ -125,6 +131,7 @@ export const TrainC = styled.div`
     min-height: 521px;
     @media only screen and (max-width: 620px) {
         min-height: 850px;
+        padding-bottom: 400px;
     }
 `;
 
@@ -176,7 +183,6 @@ export const TrainCDetail = styled.p`
 export const TrainCBotPic = styled.div`
     display: flex;
     margin-top: auto;
-    height: 100%;
     @media only screen and (max-width: 1040px) {
         margin: auto;
     }
