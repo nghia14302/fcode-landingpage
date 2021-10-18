@@ -17,8 +17,8 @@ import {
 
 const Register = () => {
     const getData = () => {
-        get('/auth/google');
-    }
+        get('/api/auth/google');
+    };
 
     return (
         <RegisterContainer>
