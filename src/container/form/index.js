@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
 import Image from '../../assets/form/bg.png';
-import { put } from '../../utils/Apicaller';
+import { put } from '../../utils/apiCaller';
 import Popup from './popup';
 import {
     SectionWrapper,

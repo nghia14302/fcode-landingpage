@@ -21,12 +21,12 @@ const About = () => {
                 Còn chờ gì nữa, nhanh tay đăng kí nào các bạn!
             </SText>
             <BtnContainer data-aos="fade-up" data-aos-delay="400">
-                <NavLink href="/form">
+                <NavLink to="/form">
                     <FilledButton bg-color="#00db96">ĐĂNG KÍ</FilledButton>
                 </NavLink>
-                <NavLink href="#submission">
+                <a href="#submission">
                     <FilledButton bg-color="#33A7ff">TIMELINE</FilledButton>
-                </NavLink>
+                </a>
             </BtnContainer>
         </StyledAbout>
     );
