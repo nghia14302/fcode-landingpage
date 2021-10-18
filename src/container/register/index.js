@@ -19,7 +19,7 @@ const progress = [
         title: 'Xác nhận Mail',
         description: 'Mở mail để xác nhận',
         step: '2',
-        isDone: true,
+        isDone: false,
     },
     {
         key: 'Accept',
