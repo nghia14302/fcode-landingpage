@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 
 import AOS from 'aos';
-import { Route, Switch, useLocation } from 'react-router-dom';
+import { Route, Switch, useLocation, Redirect } from 'react-router-dom';
 
 import FAQ from './FAQ';
 import Footer from './Footer';
@@ -29,7 +29,7 @@ AOS.init({
 
 const LandingPage = () => {
     const location = useLocation();
-
+    const step = JSON.parse(window.localStorage.getItem('step'));
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [location]);
@@ -46,12 +46,13 @@ const LandingPage = () => {
                 <Route exact path="/register">
                     <Register />
                 </Route>
-                <Route exact path="/form">
+                <Route exact path={step !== 2 ? '/' : '/form'}>
                     <Form />
                 </Route>
                 <Route exact path="/faq">
                     <FAQ />
                 </Route>
+                <Redirect to="/" />
             </Switch>
             <Footer />
         </React.Fragment>

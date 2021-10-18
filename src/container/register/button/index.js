@@ -33,7 +33,7 @@ const RegisterButton = (props) => {
 
     const Confirm = () => (
         <Button color="#00d17d" onClick={() => history.push('/')} fontColor="white">
-            Xác nhận thành công
+            Về trang chủ
         </Button>
     );
     switch (props.step) {

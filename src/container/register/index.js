@@ -25,7 +25,7 @@ const progress = [
     },
     {
         key: 'Accept',
-        title: 'Xác nhận',
+        title: 'Đã ghi nhận',
         description: '',
         step: 3,
         isDone: false,
@@ -39,7 +39,7 @@ const Register = () => {
     } catch (e) {
         localStorage = undefined;
     }
-    const [step, setStep] = useState(() => localStorage || { step: 1 });
+    const [step, setStep] = useState(() => localStorage || 1);
     const location = useLocation();
     const history = useHistory();
     const token = window.localStorage.getItem('token');
@@ -47,6 +47,7 @@ const Register = () => {
     const handleStep = async () => {
         await get('/auth/getStep', {}, { Authorization: token }).then((value) => {
             setStep(value.data.step);
+            window.localStorage.setItem('step', JSON.stringify(value.data.step));
         });
     };
     useEffect(() => {
@@ -59,7 +60,6 @@ const Register = () => {
         }
         if (urlState === 'true') {
             window.localStorage.setItem('token', urlToken);
-            window.localStorage.setItem('step', JSON.stringify(step));
             history.push('/register');
         }
     }, [ location ]);
