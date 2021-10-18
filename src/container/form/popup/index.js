@@ -44,12 +44,12 @@ const Popup = (props) => {
             case 'notConfirmed':
                 return <NotConfirmed close={props.close}></NotConfirmed>;
             case 'success':
-                return <Success close={props.close}></Success>;
+                return <Success close={props.redirect}></Success>;
         }
     };
     return (
         <PopupOverlay>
-            <Overlay onClick={props.close}></Overlay>
+            <Overlay onClick={props.type === 'success' ? props.redirect : props.close} />
             <Box data-aos="fade-down">{renderSwitch(props.type)}</Box>
         </PopupOverlay>
     );

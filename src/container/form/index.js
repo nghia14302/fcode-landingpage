@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 
+import { useHistory } from 'react-router-dom';
+
 import Image from '../../assets/form/bg.png';
+import { put } from '../../utils/ApiCaller';
 import Popup from './popup';
 import {
     SectionWrapper,
@@ -39,6 +42,7 @@ const initialFormData = Object.freeze({
 const Form = () => {
     const [popupSpec, setPopupSpec] = useState({ isShowing: false, type: '' });
     const [submit, setSubmit] = useState(initialFormData);
+    const history = useHistory();
     const handleChange = (e) => {
         setSubmit({
             ...submit,
@@ -46,7 +50,7 @@ const Form = () => {
                 e.target.type === 'checkbox' ? e.target.checked : e.target.value.trim(),
         });
     };
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         if (submit.lname === '' || submit.id === '' || submit.fname === '' || submit.phone === '') {
             setPopupSpec({ isShowing: true, type: 'missing' });
@@ -56,6 +60,9 @@ const Form = () => {
             setPopupSpec({ isShowing: true, type: 'success' });
             //submit to BE here
         }
+        await put('/api/students', {
+            student: submit,
+        });
     };
     return (
         <SectionWrapper>
@@ -63,6 +70,7 @@ const Form = () => {
                 <Popup
                     type={popupSpec.type}
                     close={() => setPopupSpec({ isShowing: false, type: '' })}
+                    redirect={() => history.push('/')}
                 />
             ) : null}
             <FormContainer>
