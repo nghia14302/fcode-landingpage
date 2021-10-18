@@ -7,7 +7,7 @@ const ProgressBar = (props) => {
     return (
         <ProgressContainer>
             {props.data.map((item) => (
-                <Status key={item.key} data={item} />
+                <Status key={item.key} data={item} progress={props.progress} />
             ))}
         </ProgressContainer>
     );

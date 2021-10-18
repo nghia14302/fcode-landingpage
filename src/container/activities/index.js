@@ -74,7 +74,7 @@ const Activities = () => {
                                 Đến với F-Code các bạn sẽ được tham gia rất nhiều hoạt động bổ ích,
                                 cũng như trau dồi thêm được nhiều kinh nghiệp quý giá
                             </Detail>
-                            <a href="/form">
+                            <a href="/register">
                                 <RegisButton data-aos="fade-up">ĐĂNG KÍ</RegisButton>
                             </a>
                         </TitleInfo>

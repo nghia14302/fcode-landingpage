@@ -24,6 +24,8 @@ export const Button = styled.button`
 
 export const Icon = styled.div``;
 
+export const Link = styled.a``;
+
 export const GoogleIcon = styled.img`
     background-image: url(${(props) => props.src});
     width: 27px;

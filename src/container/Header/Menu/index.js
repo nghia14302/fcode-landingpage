@@ -25,7 +25,7 @@ const Menu = (props) => {
                 <NavLink to="/faq" onClick={() => props.setOpen(false)}>
                     <BlankButton>FAQ</BlankButton>
                 </NavLink>
-                <NavLink to="/form" onClick={() => props.setOpen(false)}>
+                <NavLink to="/register" onClick={() => props.setOpen(false)}>
                     <FilledButton>ĐĂNG KÍ</FilledButton>
                 </NavLink>
             </BtnContainer>

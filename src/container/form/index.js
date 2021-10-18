@@ -43,6 +43,7 @@ const Form = () => {
     const [popupSpec, setPopupSpec] = useState({ isShowing: false, type: '' });
     const [submit, setSubmit] = useState(initialFormData);
     const history = useHistory();
+    const token = window.localStorage.getItem('token');
     const handleChange = (e) => {
         setSubmit({
             ...submit,
@@ -58,8 +59,21 @@ const Form = () => {
             setPopupSpec({ isShowing: true, type: 'notConfirmed' });
         } else {
             setPopupSpec({ isShowing: true, type: 'success' });
-            await put('/api/students', {
-                student: submit,
+            await put(
+                '/api/students',
+                {
+                    phone: submit.phone,
+                    name: submit.lname + submit.fname,
+                    studentCode: submit.id,
+                    major: submit.spec,
+                    semester: submit.sem,
+                },
+                {},
+                {
+                    Authorization: token,
+                }
+            ).then((res) => {
+                console.log(res);
             });
         }
     };
@@ -69,7 +83,7 @@ const Form = () => {
                 <Popup
                     type={popupSpec.type}
                     close={() => setPopupSpec({ isShowing: false, type: '' })}
-                    redirect={() => history.push('/')}
+                    redirect={() => history.push('/register')}
                 />
             ) : null}
             <FormContainer>

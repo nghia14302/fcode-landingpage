@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 
 import AOS from 'aos';
-import { Route, Switch, Redirect, useLocation } from 'react-router-dom';
+import { Route, Switch, useLocation } from 'react-router-dom';
 
 import FAQ from './FAQ';
 import Footer from './Footer';
@@ -52,7 +52,6 @@ const LandingPage = () => {
                 <Route exact path="/faq">
                     <FAQ />
                 </Route>
-                <Redirect to="/" />
             </Switch>
             <Footer />
         </React.Fragment>

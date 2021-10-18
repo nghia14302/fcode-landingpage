@@ -2,19 +2,28 @@ import React from 'react';
 
 import { useHistory } from 'react-router-dom';
 
+import { API_URL } from '../../../config';
 import icons from './../../../assets/icons';
-import { Button, GoogleIcon, Icon } from './style';
+import { Button, GoogleIcon, Icon, Link } from './style';
 
 const RegisterButton = (props) => {
     const history = useHistory();
+    const ApiUrl = API_URL + '/auth/google';
+
+    const handleError = () => {
+        window.localStorage.clear();
+        history.push('/');
+    };
 
     const LoginGoogle = () => (
-        <Button onClick={() => props.getData()} color="white" fontColor="black">
-            <Icon>
-                <GoogleIcon src={icons['google.svg']} />
-            </Icon>
-            Đăng nhập với FPT Mail
-        </Button>
+        <Link href={ApiUrl}>
+            <Button color="white" fontColor="black">
+                <Icon>
+                    <GoogleIcon src={icons['google.svg']} />
+                </Icon>
+                Đăng nhập với FPT Mail
+            </Button>
+        </Link>
     );
     const Form = () => (
         <Button color="#00d17d" onClick={() => history.push('/form')} fontColor="white">
@@ -28,15 +37,14 @@ const RegisterButton = (props) => {
         </Button>
     );
     switch (props.step) {
-        case '1':
+        case 1:
             return <LoginGoogle />;
-            break;
-        case '2':
+        case 2:
             return <Form />;
-            break;
-        case '3':
+        case 3:
             return <Confirm />;
-            break;
+        default:
+            return <Button onClick={handleError}>Có lỗi xảy ra, Về trang chủ nhé!</Button>;
     }
 };
 

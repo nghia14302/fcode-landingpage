@@ -20,7 +20,7 @@ const NavBar = () => {
             <NavLink to="/faq">
                 <BlankButton>FAQ</BlankButton>
             </NavLink>
-            <NavLink to="/form">
+            <NavLink to="/register">
                 <FilledButton>ĐĂNG KÍ</FilledButton>
             </NavLink>
         </StyledNavBar>
