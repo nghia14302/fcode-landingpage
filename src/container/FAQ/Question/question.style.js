@@ -4,6 +4,7 @@ const StyledContainer = styled.div`
     display: flex;
     flex-direction: column;
     background: transparent;
+    margin-bottom: 2rem;
 `;
 
 const StyledAns = styled.div`
