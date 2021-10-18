@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import { Route, Switch, Redirect, useLocation } from 'react-router-dom';
 
+import FAQ from './FAQ';
 import Footer from './Footer';
 import Header from './Header';
 import Activities from './activities';
@@ -43,6 +44,9 @@ const LandingPage = () => {
                 </Route>
                 <Route exact path="/register">
                     <Register />
+                </Route>
+                <Route exact path="/faq">
+                    <FAQ />
                 </Route>
                 <Redirect to="/" />
             </Switch>
