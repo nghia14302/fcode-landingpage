@@ -51,7 +51,7 @@ const Submission = () => {
     return (
         <StageInvite>
             <StageInviteBackground />
-            <SubmitContainer>
+            <SubmitContainer id="submission">
                 <DescriptionContainer>
                     <Title data-aos="fade-left" data-aos-anchor="bottom-bottom">
                         Giai Đoạn Tuyển Chọn

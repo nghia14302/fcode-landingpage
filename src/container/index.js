@@ -7,6 +7,7 @@ import FAQ from './FAQ';
 import Footer from './Footer';
 import Header from './Header';
 import Activities from './activities';
+import Form from './form';
 import Home from './home';
 import Register from './register';
 
@@ -44,6 +45,9 @@ const LandingPage = () => {
                 </Route>
                 <Route exact path="/register">
                     <Register />
+                </Route>
+                <Route exact path="/form">
+                    <Form />
                 </Route>
                 <Route exact path="/faq">
                     <FAQ />
