@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Route, Switch, Redirect } from 'react-router-dom';
 
+import FAQ from './FAQ';
 import Footer from './Footer';
 import Header from './Header';
 import Activities from './activities';
@@ -21,6 +22,9 @@ const LandingPage = () => {
                 </Route>
                 <Route exact path="/form">
                     <Form />
+                </Route>
+                <Route exact path="/faq">
+                    <FAQ />
                 </Route>
                 <Redirect to="/" />
             </Switch>
