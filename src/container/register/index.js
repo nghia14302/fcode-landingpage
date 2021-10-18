@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import background from '../../assets/img/register/Frame.svg';
-import { get } from './../../utils/apiCaller';
+import { get } from '../../utils/apiCaller';
 import RegisterButton from './button';
 import ProgressBar from './progress';
 import { RegisterContainer, RegisterContent, Title, Description, Background } from './style';
