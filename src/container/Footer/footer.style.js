@@ -43,6 +43,12 @@ const XSText = styled.div`
     color: #00000099;
     > a {
         font-weight: bold;
+        :link,
+        :active,
+        :visited {
+            text-decoration: none;
+            color: #00000099;
+        }
     }
 `;
 

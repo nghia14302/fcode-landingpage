@@ -32,7 +32,7 @@ const Cards = () => {
         <Spirit>
             <Content>
                 <DescriptionContainer>
-                    <Title data-aos="fade-up">Tinh Thần FCode</Title>
+                    <Title data-aos="fade-up">Tinh Thần F-Code</Title>
                     <Description data-aos="fade-up">
                         Tinh thần của mỗi thành viên sẽ đóng vai trò rất quan trọng để xây dựng một
                         tập thể lớn mạnh

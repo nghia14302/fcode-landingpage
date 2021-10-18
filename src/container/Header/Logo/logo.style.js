@@ -22,7 +22,6 @@ const LText = styled.div`
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
-    width: 75px;
     font-weight: 400;
 `;
 

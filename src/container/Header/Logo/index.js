@@ -7,7 +7,7 @@ const Logo = () => {
     return (
         <StyledLogo>
             <img src={logo} alt="Logo"></img>
-            <LText>FCode</LText>
+            <LText>F-Code</LText>
         </StyledLogo>
     );
 };

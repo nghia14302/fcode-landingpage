@@ -6,7 +6,7 @@ import { StyledFooter, LText, SText, XSText } from './footer.style.js';
 const Footer = () => {
     return (
         <StyledFooter>
-            <LText>Cổng thông tin FCode</LText>
+            <LText>Cổng thông tin F-Code</LText>
             <SText>
                 Mọi thắc mắc các bạn có thể liên hệ cho chúng mình qua đường link bên dưới
             </SText>

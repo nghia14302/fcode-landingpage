@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import icons from '../../assets/icons';
 import background from '../../assets/img/register/Frame.svg';
@@ -16,8 +16,17 @@ import {
 } from './style';
 
 const Register = () => {
-    const getData = () => {
-        get('/api/auth/google');
+    const [data, setData] = useState({});
+    const getData = async () => {
+        let resppone = await get('/auth/google')
+            .then((r) => {
+                setData(r);
+                return r;
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+        console.log(resppone);
     };
 
     return (
@@ -26,14 +35,14 @@ const Register = () => {
                 <RegisterContent>
                     <Title>
                         ĐĂNG KÍ THAM GIA
-                        <span> FCODE</span>
+                        <span> F-Code</span>
                     </Title>
                     <Description>
-                        Để trở thành thành viên đầu tiên của FCode, trước hết các bạn phải đăng kí
+                        Để trở thành thành viên đầu tiên của F-Code, trước hết các bạn phải đăng kí
                         tài khoản qua Gmail FPT
                     </Description>
                     <ProgressBar progress={'1'} />
-                    <GoogleButton onClick={getData()}>
+                    <GoogleButton onClick={() => getData()}>
                         <Icon>
                             <GoogleIcon src={icons['google.svg']} />
                         </Icon>

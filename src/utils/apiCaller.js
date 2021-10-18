@@ -2,11 +2,11 @@ import axios from 'axios';
 
 import { API_URL } from '../config';
 
-const request = (endpoint, method, header, params, body) => {
+const request = (endpoint, method, headers, params, body) => {
     return axios({
         url: API_URL + endpoint,
         method: method,
-        header: Object.assign({}, header),
+        headers: Object.assign({}, headers),
         params: Object.assign({}, params),
         data: body,
     });

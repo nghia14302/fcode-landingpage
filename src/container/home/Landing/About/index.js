@@ -11,11 +11,11 @@ const About = () => {
                 <LText>LẬP TRÌNH</LText>
                 <LText>TƯƠNG LAI CÙNG</LText>
                 <LText>
-                    <span style={{ color: '#00D17d' }}>FCODE</span>
+                    <span style={{ color: '#00D17d' }}>F-Code</span>
                 </LText>
             </div>
             <SText data-aos="fade-up" data-aos-delay="200">
-                Tham gia FCode để cùng nhau chia sẻ kiến thức về nhiều khía cạnh trong ngành lập
+                Tham gia F-Code để cùng nhau chia sẻ kiến thức về nhiều khía cạnh trong ngành lập
                 trình.
                 <br></br>
                 Còn chờ gì nữa, nhanh tay đăng kí nào các bạn!

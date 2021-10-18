@@ -15,7 +15,7 @@ const data = [
         icon: 'doc.svg',
         title: 'Đăng kí form',
         time: 'Thời gian: 21/9 - 24/10',
-        description: 'Các bạn hãy nhấn nút đăng ký để tham gia thử thách của CLB FCode ngay nhé!',
+        description: 'Các bạn hãy nhấn nút đăng ký để tham gia thử thách của CLB F-Code ngay nhé!',
         button: 'Đăng kí',
         enable: true,
     },
@@ -25,7 +25,7 @@ const data = [
         time: 'Thời gian: 21/9 - 24/10',
         description: 'Thử thách sẽ được bật mí vào ngày 1/10',
         details:
-            'Ở thử thách đầu tiên các bạn hãy tạo một bản CV ghi đầy đủ những thông tin của bản thân và gửi về mail CLB: Fcodemail@gmail.com',
+            'Ở thử thách đầu tiên các bạn hãy tạo một bản CV ghi đầy đủ những thông tin của bản thân và gửi về mail CLB: FCodemail@gmail.com',
         button: 'Chi tiết',
         enable: false,
     },
@@ -57,7 +57,7 @@ const Submission = () => {
                         Giai Đoạn Tuyển Chọn
                     </Title>
                     <Description data-aos="fade-left">
-                        Để trở thành thành viên chính thức của FCode, các bạn phải trải qua 4 giai
+                        Để trở thành thành viên chính thức của F-Code, các bạn phải trải qua 4 giai
                         chính
                     </Description>
                 </DescriptionContainer>

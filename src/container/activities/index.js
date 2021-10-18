@@ -68,10 +68,10 @@ const Activities = () => {
                             <TitleHead data-aos="fade-up">
                                 MỘT SỐ <br /> HOẠT ĐỘNG CỦA CLB
                                 <br />
-                                <TitleSpan>FCODE</TitleSpan>
+                                <TitleSpan>F-Code</TitleSpan>
                             </TitleHead>
                             <Detail data-aos="fade-up">
-                                Đến với FCode các bạn sẽ được tham gia rất nhiều hoạt động bổ ích,
+                                Đến với F-Code các bạn sẽ được tham gia rất nhiều hoạt động bổ ích,
                                 cũng như trau dồi thêm được nhiều kinh nghiệp quý giá
                             </Detail>
                             <RegisButton data-aos="fade-up">ĐĂNG KÍ</RegisButton>
