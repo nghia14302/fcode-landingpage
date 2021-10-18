@@ -13,13 +13,15 @@ const NavBar = () => {
             <NavLink to="/activities">
                 <BlankButton>Hoạt động</BlankButton>
             </NavLink>
-            <NavLink to="/timeline">
+            <NavLink to="/#submission">
                 <BlankButton>Timeline</BlankButton>
             </NavLink>
             <NavLink to="/faq">
                 <BlankButton>FAQ</BlankButton>
             </NavLink>
-            <FilledButton>ĐĂNG KÍ</FilledButton>
+            <a href="/form">
+                <FilledButton>ĐĂNG KÍ</FilledButton>
+            </a>
         </StyledNavBar>
     );
 };
