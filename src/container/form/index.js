@@ -59,6 +59,12 @@ const Form = () => {
     };
     return (
         <SectionWrapper>
+            {popupSpec.isShowing ? (
+                <Popup
+                    type={popupSpec.type}
+                    close={() => setPopupSpec({ isShowing: false, type: '' })}
+                />
+            ) : null}
             <FormContainer>
                 <FormContent>
                     <FormTitle>
@@ -155,12 +161,6 @@ const Form = () => {
                     <FormImage src={Image} draggable="false"></FormImage>
                 </ImageContainer>
             </FormContainer>
-            {popupSpec.isShowing ? (
-                <Popup
-                    type={popupSpec.type}
-                    close={() => setPopupSpec({ isShowing: false, type: '' })}
-                />
-            ) : null}
         </SectionWrapper>
     );
 };

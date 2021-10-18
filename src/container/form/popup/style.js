@@ -1,5 +1,12 @@
 import styled from 'styled-components';
 
+export const PopupOverlay = styled.div`
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 99;
+`;
 export const Box = styled.div`
     position: fixed;
     width: 450px;
@@ -59,4 +66,11 @@ export const CloseButton = styled.button`
     &:hover {
         filter: brightness(95%);
     }
+`;
+
+export const Overlay = styled.div`
+    position: absolute;
+    background-color: rgb(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
 `;

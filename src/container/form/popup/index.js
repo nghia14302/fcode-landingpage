@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Box, Content, Title, Head, Detail, CloseButton } from './style.js';
+import { Box, Content, Title, Head, Detail, CloseButton, Overlay, PopupOverlay } from './style.js';
 
 const Missing = (props) => {
     return (
@@ -47,7 +47,12 @@ const Popup = (props) => {
                 return <Success close={props.close}></Success>;
         }
     };
-    return <Box>{renderSwitch(props.type)}</Box>;
+    return (
+        <PopupOverlay>
+            <Overlay onClick={props.close}></Overlay>
+            <Box>{renderSwitch(props.type)}</Box>
+        </PopupOverlay>
+    );
 };
 
 export default Popup;
