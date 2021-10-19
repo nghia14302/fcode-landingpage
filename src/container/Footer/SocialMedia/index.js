@@ -18,7 +18,7 @@ const SocialMedia = () => {
             <a href="https://discord.f-code.tech">
                 <img src={discord} alt="discord"></img>
             </a>
-            <a href="https://f-code.tech">
+            <a href="http://fcodehcm.wordpress.com/">
                 <img src={docs} alt="docs"></img>
             </a>
         </StyledSocialMedia>

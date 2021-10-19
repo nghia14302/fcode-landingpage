@@ -14,7 +14,7 @@ const data = [
     {
         icon: 'doc.svg',
         title: 'Đăng kí form',
-        time: 'Thời gian: 21/9 - 24/10',
+        time: 'Thời gian: 19/10- 26/10',
         description: 'Các bạn hãy nhấn nút đăng ký để tham gia thử thách của CLB F-Code ngay nhé!',
         button: 'Đăng kí',
         enable: true,
@@ -22,8 +22,8 @@ const data = [
     {
         icon: 'flag.svg',
         title: 'Thử thách thứ nhất',
-        time: 'Thời gian: 21/9 - 24/10',
-        description: 'Thử thách sẽ được bật mí vào ngày 1/10',
+        time: 'Thời gian: Thông báo sau',
+        description: 'Thử thách sẽ được bật mí sau',
         details:
             'Ở thử thách đầu tiên các bạn hãy tạo một bản CV ghi đầy đủ những thông tin của bản thân và gửi về mail CLB: FCodemail@gmail.com',
         button: 'Chi tiết',
@@ -32,16 +32,16 @@ const data = [
     {
         icon: 'flag.svg',
         title: 'Thử thách thứ hai',
-        time: 'Thời gian: 21/9 - 24/10',
-        description: 'Thử thách sẽ được bật mí vào ngày 1/10',
+        time: 'Thời gian: Thông báo sau',
+        description: 'Thử thách sẽ được bật mí sau',
         button: 'Chi tiết',
         enable: false,
     },
     {
         icon: 'flag.svg',
         title: 'Thử thách thứ ba',
-        time: 'Thời gian: 21/9 - 24/10',
-        description: 'Thử thách sẽ được bật mí vào ngày 1/10',
+        time: 'Thời gian: Thông báo sau',
+        description: 'Thử thách sẽ được bật mí sau',
         button: 'Chi tiết',
         enable: false,
     },

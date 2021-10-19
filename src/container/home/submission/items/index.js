@@ -29,7 +29,7 @@ const Items = (props) => {
         if (isDeatails !== 'Đăng kí') {
             setOpen(true);
         } else {
-            history.push('/form');
+            history.push('/register');
         }
     };
     const closePopup = () => setOpen(false);

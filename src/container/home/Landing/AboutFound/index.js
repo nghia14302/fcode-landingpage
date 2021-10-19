@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { StyledAboutFound, LText, SText, More } from './aboutFound.style';
+import { StyledAboutFound, LText, SText } from './aboutFound.style';
 
 const AboutFound = () => {
     return (
@@ -12,9 +12,9 @@ const AboutFound = () => {
                 phần mềm có đam mê được thỏa sức trao đổi và học tập với nhau. Sau hơn 5 năm hoạt
                 động, CLB đã tạo được nhiều sân chơi cho các bạn sinh viên
             </SText>
-            <More>
+            {/* <More>
                 <span style={{ color: '#00d17d' }}>Xem thêm &gt;</span>
-            </More>
+            </More> */}
         </StyledAboutFound>
     );
 };

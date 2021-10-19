@@ -40,8 +40,9 @@ const initialFormData = Object.freeze({
 });
 
 const Form = () => {
-    const [popupSpec, setPopupSpec] = useState({ isShowing: false, type: '' });
+    const [popupSpec, setPopupSpec] = useState({ isShowing: false, type: '', content: '' });
     const [submit, setSubmit] = useState(initialFormData);
+    const [response, setResponse] = useState();
     const history = useHistory();
     const token = window.localStorage.getItem('token');
     const handleChange = (e) => {
@@ -58,7 +59,6 @@ const Form = () => {
         } else if (!submit.confirm) {
             setPopupSpec({ isShowing: true, type: 'notConfirmed' });
         } else {
-            setPopupSpec({ isShowing: true, type: 'success' });
             await put(
                 '/api/students',
                 {
@@ -73,7 +73,38 @@ const Form = () => {
                     Authorization: token,
                 }
             ).then((res) => {
-                console.log(res);
+                setResponse(res.data.status.message);
+                if (response === 'Invalid phone number!') {
+                    setPopupSpec({
+                        isShowing: true,
+                        type: 'notConfirmed',
+                        content: 'Số điện thoại không hợp lệ',
+                    });
+                }
+                if (response === 'Invalid name!') {
+                    setPopupSpec({
+                        isShowing: true,
+                        type: 'notConfirmed',
+                        content: 'Tên nhập vào không hợp lệ',
+                    });
+                }
+                if (response === 'Invalid student code!') {
+                    setPopupSpec({
+                        isShowing: true,
+                        type: 'notConfirmed',
+                        content: 'Mã số sinh viên không hợp lệ',
+                    });
+                }
+                if (response === 'Already registered!!') {
+                    setPopupSpec({
+                        isShowing: true,
+                        type: 'notConfirmed',
+                        content: 'Bạn đã đăng kí rồi',
+                    });
+                }
+                if (response === 'Registered successfully!') {
+                    setPopupSpec({ isShowing: true, type: 'success' });
+                }
             });
         }
     };
@@ -84,6 +115,7 @@ const Form = () => {
                     type={popupSpec.type}
                     close={() => setPopupSpec({ isShowing: false, type: '' })}
                     redirect={() => history.push('/register')}
+                    content={popupSpec.content}
                 />
             ) : null}
             <FormContainer>

@@ -26,7 +26,6 @@ AOS.init({
     mirror: false, // is animate out when scrolling past them
     anchorPlacement: 'top-bottom', // Which position that the element should be triggered
 });
-
 const LandingPage = () => {
     const location = useLocation();
     const step = JSON.parse(window.localStorage.getItem('step'));
@@ -58,5 +57,15 @@ const LandingPage = () => {
         </React.Fragment>
     );
 };
+//Console log Title
+console.clear();
+console.log('$$$$$$$$\\       $$$$$$\\                  $$\\');
+console.log('$$  _____|     $$  __$$\\                 $$ |');
+console.log('$$ |           $$\\/  \\__| $$$$$$   $$$$$$$ | $$$$$$\\');
+console.log('$$$$$\\ $$$$$$\\ $$ |      $$  __$$ $$  __$$ |$$  __$$\\');
+console.log('$$  __|\\______|$$ |      $$ /  $$ |$$ /  $$ |$$$$$$$$ |');
+console.log('$$ |           $$ |  $$\\ $$ |  $$ |$$ |  $$ |$$   ____|');
+console.log('$$ |           \\$$$$$$  |\\$$$$$$  |\\$$$$$$$ |\\$$$$$$$\\');
+console.log('\\__|            \\______/  \\______/  \\_______| \\_______|');
 
 export default LandingPage;

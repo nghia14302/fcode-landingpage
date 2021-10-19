@@ -19,10 +19,8 @@ const StyledLogo = styled.div`
 const LText = styled.div`
     font-family: Roboto;
     font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
+    font-weight: 900;
     line-height: 24px;
-    font-weight: 400;
 `;
 
 export { StyledLogo, LText };

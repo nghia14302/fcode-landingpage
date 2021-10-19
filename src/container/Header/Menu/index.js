@@ -9,7 +9,7 @@ import { StyledMenu, LogoContainer, BtnContainer } from './menu.style';
 const Menu = (props) => {
     return (
         <StyledMenu open={props.open}>
-            <LogoContainer>
+            <LogoContainer onClick={() => props.setOpen(false)}>
                 <Logo></Logo>
             </LogoContainer>
             <BtnContainer>
