@@ -36,7 +36,6 @@ const Container = styled.div`
     display: grid;
     grid-template-rows: 300px 1fr;
     @media (max-width: 992px) {
-        grid-template-rows: max-content 1fr;
     }
 `;
 

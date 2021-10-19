@@ -8,7 +8,7 @@ const StyledContainer = styled.div`
     position: relative;
     width: 100vw;
     height: 100vh;
-    overflow-x: hidden;
+    overflow: hidden;
     position: relative;
     @media (max-width: 992px) {
         grid-template-columns: 1fr;
@@ -35,7 +35,6 @@ const CollectionContaier = styled.div`
         margin: 0px 60px;
     }
     @media (max-width: 992px) {
-        margin: 8px;
         > div {
             width: 100%;
         }
