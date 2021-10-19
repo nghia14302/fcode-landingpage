@@ -9,10 +9,18 @@ import { StyledSocialMedia } from './socialMedia.style';
 const SocialMedia = () => {
     return (
         <StyledSocialMedia>
-            <img src={facebook} alt="facebook"></img>
-            <img src={youtube} alt="youtube"></img>
-            <img src={discord} alt="discord"></img>
-            <img src={docs} alt="docs"></img>
+            <a href="https://www.facebook.com/fcodefpt">
+                <img src={facebook} alt="facebook"></img>
+            </a>
+            <a href="https://www.youtube.com/channel/UCZyrUXSrQ1AdkomxYz1GvCw">
+                <img src={youtube} alt="youtube"></img>
+            </a>
+            <a href="https://discord.f-code.tech">
+                <img src={discord} alt="discord"></img>
+            </a>
+            <a href="http://fcodehcm.wordpress.com/">
+                <img src={docs} alt="docs"></img>
+            </a>
         </StyledSocialMedia>
     );
 };

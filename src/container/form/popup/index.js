@@ -18,7 +18,7 @@ const NotConfirmed = (props) => {
         <Content>
             <Title>
                 <Head>Đăng kí thất bại</Head>
-                <Detail>Bạn chưa đồng ý tham gia thử thách</Detail>
+                <Detail>{props.content}</Detail>
             </Title>
             <CloseButton onClick={props.close}>ĐÃ HIỂU</CloseButton>
         </Content>
@@ -42,7 +42,7 @@ const Popup = (props) => {
             case 'missing':
                 return <Missing close={props.close}></Missing>;
             case 'notConfirmed':
-                return <NotConfirmed close={props.close}></NotConfirmed>;
+                return <NotConfirmed close={props.close} content={props.content}></NotConfirmed>;
             case 'success':
                 return <Success close={props.redirect}></Success>;
             default:

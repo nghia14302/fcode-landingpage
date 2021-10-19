@@ -52,9 +52,12 @@ export const Detail = styled.p`
     font-size: 24px;
     line-height: 120%;
     color: rgba(0, 0, 0, 0.6);
-    min-width: 400px;
     max-width: 530px;
     margin-bottom: 50px;
+    @media screen and (max-width: 520px) {
+        width: auto !important;
+        font-size: 18px;
+    }
 `;
 
 export const RegisButton = styled.button`
@@ -153,8 +156,6 @@ export const TrainCText = styled.div`
     margin-left: auto;
     @media only screen and (max-width: 1040px) {
         margin-right: auto;
-    }
-    @media only screen and (max-width: 620px) {
         margin-bottom: 50px;
     }
 `;
@@ -248,7 +249,6 @@ export const TBDetail = styled.p`
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
-    line-height: 120%;
     color: #ffffff;
     margin-left: 5%;
     @media only screen and (max-width: 1240px) {
@@ -268,9 +268,13 @@ export const WorkShopSection = styled.div`
 
 export const WorkShopInfo = styled.div`
     width: 433px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
     @media only screen and (max-width: 1030px) {
         margin-left: 50px;
+    }
+    @media screen and (max-width: 520px) {
+        width: auto;
+        margin-left: 15px;
     }
 `;
 
@@ -282,6 +286,9 @@ export const WorkShopHead = styled.h2`
     line-height: 24px;
     color: rgba(0, 0, 0, 0.87);
     margin-bottom: 35px;
+    @media screen and (max-width: 520px) {
+        font-size: 48px;
+    }
 `;
 
 export const WorkShopDetail = styled.p`
@@ -291,6 +298,9 @@ export const WorkShopDetail = styled.p`
     font-size: 24px;
     line-height: 120%;
     color: rgba(0, 0, 0, 0.6);
+    @media screen and (max-width: 520px) {
+        font-size: 18px;
+    }
 `;
 
 export const WorkShopImgWrap = styled.div`

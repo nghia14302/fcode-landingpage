@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const StyledHeader = styled.div`
@@ -16,6 +17,16 @@ const StyledHeader = styled.div`
 
     @media (max-width: 1440px) {
         padding: 8px;
+    }
+`;
+
+export const NavLink = styled(Link)`
+    text-decoration: none;
+    color: #0000005c;
+    :visited,
+    :active {
+        text-decoration: none;
+        color: #00d17d;
     }
 `;
 

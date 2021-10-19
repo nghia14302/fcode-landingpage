@@ -9,9 +9,9 @@ import { StyledHeader, Container } from './header.style';
 import { useOnClickOutside } from './hooks';
 
 const Header = () => {
-    let [open, setOpen] = useState(false);
-
+    const [open, setOpen] = useState(false);
     const menu = useRef();
+
     useOnClickOutside(menu, () => setOpen(false));
 
     return (

@@ -1,7 +1,5 @@
 import React from 'react';
 
-import AOS from 'aos';
-
 import {
     Pic1,
     Pic2,
@@ -14,6 +12,7 @@ import {
     Pic9,
     Pic10,
 } from '../../assets/img/activities';
+import { NavLink } from '../style';
 import {
     SectionWrapper,
     TopContainer,
@@ -61,7 +60,6 @@ import {
 import 'aos/dist/aos.css';
 
 const Activities = () => {
-    AOS.init({ duration: 1200 });
     return (
         <SectionWrapper>
             <TopContainer>
@@ -71,15 +69,15 @@ const Activities = () => {
                             <TitleHead data-aos="fade-up">
                                 MỘT SỐ <br /> HOẠT ĐỘNG CỦA CLB
                                 <br />
-                                <TitleSpan>FCODE</TitleSpan>
+                                <TitleSpan>F-Code</TitleSpan>
                             </TitleHead>
                             <Detail data-aos="fade-up">
-                                Đến với FCode các bạn sẽ được tham gia rất nhiều hoạt động bổ ích,
+                                Đến với F-Code các bạn sẽ được tham gia rất nhiều hoạt động bổ ích,
                                 cũng như trau dồi thêm được nhiều kinh nghiệp quý giá
                             </Detail>
-                            <a href="/form">
+                            <NavLink to="/register">
                                 <RegisButton data-aos="fade-up">ĐĂNG KÍ</RegisButton>
-                            </a>
+                            </NavLink>
                         </TitleInfo>
                         <CirclesContainer data-aos="fade-left">
                             <CircleWrap>

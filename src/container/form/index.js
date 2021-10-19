@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
 import Image from '../../assets/form/bg.png';
-import { put } from '../../utils/Apicaller';
+import { put } from '../../utils/apiCaller';
 import Popup from './popup';
 import {
     SectionWrapper,
@@ -40,9 +40,11 @@ const initialFormData = Object.freeze({
 });
 
 const Form = () => {
-    const [popupSpec, setPopupSpec] = useState({ isShowing: false, type: '' });
+    const [popupSpec, setPopupSpec] = useState({ isShowing: false, type: '', content: '' });
     const [submit, setSubmit] = useState(initialFormData);
+    const [response, setResponse] = useState();
     const history = useHistory();
+    const token = window.localStorage.getItem('token');
     const handleChange = (e) => {
         setSubmit({
             ...submit,
@@ -57,9 +59,52 @@ const Form = () => {
         } else if (!submit.confirm) {
             setPopupSpec({ isShowing: true, type: 'notConfirmed' });
         } else {
-            setPopupSpec({ isShowing: true, type: 'success' });
-            await put('/api/students', {
-                student: submit,
+            await put(
+                '/api/students',
+                {
+                    phone: submit.phone,
+                    name: submit.lname + submit.fname,
+                    studentCode: submit.id,
+                    major: submit.spec,
+                    semester: submit.sem,
+                },
+                {},
+                {
+                    Authorization: token,
+                }
+            ).then((res) => {
+                setResponse(res.data.status.message);
+                if (response === 'Invalid phone number!') {
+                    setPopupSpec({
+                        isShowing: true,
+                        type: 'notConfirmed',
+                        content: 'Số điện thoại không hợp lệ',
+                    });
+                }
+                if (response === 'Invalid name!') {
+                    setPopupSpec({
+                        isShowing: true,
+                        type: 'notConfirmed',
+                        content: 'Tên nhập vào không hợp lệ',
+                    });
+                }
+                if (response === 'Invalid student code!') {
+                    setPopupSpec({
+                        isShowing: true,
+                        type: 'notConfirmed',
+                        content: 'Mã số sinh viên không hợp lệ',
+                    });
+                }
+                if (response === 'Already registered!!') {
+                    setPopupSpec({
+                        isShowing: true,
+                        type: 'notConfirmed',
+                        content: 'Bạn đã đăng kí rồi',
+                    });
+                }
+                if (response === 'Registered successfully!') {
+                    setPopupSpec({ isShowing: true, type: 'success' });
+                }
             });
         }
     };
@@ -69,7 +114,8 @@ const Form = () => {
                 <Popup
                     type={popupSpec.type}
                     close={() => setPopupSpec({ isShowing: false, type: '' })}
-                    redirect={() => history.push('/')}
+                    redirect={() => history.push('/register')}
+                    content={popupSpec.content}
                 />
             ) : null}
             <FormContainer>
