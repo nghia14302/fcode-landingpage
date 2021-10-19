@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 import { useHistory } from 'react-router-dom';
 
-import Image from '../../assets/form/bg.png';
-import { put } from '../../utils/apiCaller';
+import background from '../../assets/form/Frame.svg';
+import { put } from '../../utils/Apicaller';
 import Popup from './popup';
 import {
     SectionWrapper,
@@ -40,11 +40,10 @@ const initialFormData = Object.freeze({
 });
 
 const Form = () => {
-    const [popupSpec, setPopupSpec] = useState({ isShowing: false, type: '', content: '' });
+    const [popupSpec, setPopupSpec] = useState({ isShowing: false, type: '' });
     const [submit, setSubmit] = useState(initialFormData);
-    const [response, setResponse] = useState();
     const history = useHistory();
-    const token = window.localStorage.getItem('token');
+    const svg = useRef();
     const handleChange = (e) => {
         setSubmit({
             ...submit,
@@ -59,54 +58,48 @@ const Form = () => {
         } else if (!submit.confirm) {
             setPopupSpec({ isShowing: true, type: 'notConfirmed' });
         } else {
-            await put(
-                '/api/students',
-                {
-                    phone: submit.phone,
-                    name: submit.lname + submit.fname,
-                    studentCode: submit.id,
-                    major: submit.spec,
-                    semester: submit.sem,
-                },
-                {},
-                {
-                    Authorization: token,
-                }
-            ).then((res) => {
-                setResponse(res.data.status.message);
-                if (response === 'Invalid phone number!') {
-                    setPopupSpec({
-                        isShowing: true,
-                        type: 'notConfirmed',
-                        content: 'Số điện thoại không hợp lệ',
-                    });
-                }
-                if (response === 'Invalid name!') {
-                    setPopupSpec({
-                        isShowing: true,
-                        type: 'notConfirmed',
-                        content: 'Tên nhập vào không hợp lệ',
-                    });
-                }
-                if (response === 'Invalid student code!') {
-                    setPopupSpec({
-                        isShowing: true,
-                        type: 'notConfirmed',
-                        content: 'Mã số sinh viên không hợp lệ',
-                    });
-                }
-                if (response === 'Already registered!!') {
-                    setPopupSpec({
-                        isShowing: true,
-                        type: 'notConfirmed',
-                        content: 'Bạn đã đăng kí rồi',
-                    });
-                }
-                if (response === 'Registered successfully!') {
-                    setPopupSpec({ isShowing: true, type: 'success' });
-                }
+            setPopupSpec({ isShowing: true, type: 'success' });
+            await put('/api/students', {
+                student: submit,
             });
         }
+    };
+
+    const animate = () => {
+        const img = svg.current.contentDocument;
+        let paths = img.querySelectorAll('path');
+        [...paths].forEach((item) => {
+            item.style.strokeDasharray = item.getTotalLength();
+            item.style.fillOpacity = 0;
+            item.style.strokeWidth = '0.5px';
+            item.animate(
+                [
+                    {
+                        strokeDashoffset: item.getTotalLength(),
+                        stroke: '#333',
+                        fillOpacity: 0,
+                    },
+                    {
+                        strokeDashoffset: 0,
+                        stroke: '#333',
+                        fillOpacity: 0,
+                    },
+                    {
+                        stroke: 'white',
+                        fillOpacity: '0.5',
+                    },
+                    {
+                        stroke: 'white',
+                        fillOpacity: '1',
+                    },
+                ],
+                {
+                    duration: 4000,
+                    fill: 'forwards',
+                    easing: 'linear',
+                }
+            );
+        });
     };
     return (
         <SectionWrapper>
@@ -114,8 +107,7 @@ const Form = () => {
                 <Popup
                     type={popupSpec.type}
                     close={() => setPopupSpec({ isShowing: false, type: '' })}
-                    redirect={() => history.push('/register')}
-                    content={popupSpec.content}
+                    redirect={() => history.push('/')}
                 />
             ) : null}
             <FormContainer>
@@ -211,7 +203,12 @@ const Form = () => {
                     <SubmitButton onClick={(e) => handleSubmit(e)}>ĐẮNG KÍ</SubmitButton>
                 </FormContent>
                 <ImageContainer>
-                    <FormImage src={Image} draggable="false"></FormImage>
+                    <FormImage
+                        data={background}
+                        ref={svg}
+                        onLoad={animate}
+                        area-label="sheild"
+                    ></FormImage>
                 </ImageContainer>
             </FormContainer>
         </SectionWrapper>
