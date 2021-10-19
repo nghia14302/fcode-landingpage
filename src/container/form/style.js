@@ -2,6 +2,10 @@ import styled from 'styled-components';
 
 export const SectionWrapper = styled.div`
     overflow-x: hidden;
+    @media (max-width: 568px) {
+        padding: 8px;
+        box-sizing: border-box;
+    }
 `;
 
 export const FormContainer = styled.div`
@@ -12,10 +16,15 @@ export const FormContainer = styled.div`
     gap: 25px;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr;
+
+    @media (max-width: 1200px) {
+        grid-template-columns: 1fr 0px;
+        gap: 0px;
+    }
 `;
 
 export const FormContent = styled.div`
-    width: 450px;
+    max-width: 450px;
     align-items: center;
     margin: auto;
 `;
@@ -54,11 +63,17 @@ export const Label = styled.label`
 
 export const NameInput = styled.div`
     margin-bottom: 20px;
+    display: flex;
+    gap: 30px;
+
+    @media (max-width: 576px) {
+        flex-direction: column;
+    }
 `;
 
 export const Input = styled.input`
     height: 56px;
-    width: 448px;
+    width: 100%;
     border: 1px solid rgba(0, 0, 0, 0.36);
     box-sizing: border-box;
     border-radius: 4px;
@@ -80,12 +95,11 @@ export const Input = styled.input`
 `;
 
 export const InputSmallLeft = styled.input`
-    width: 211px;
+    width: 100%;
     height: 56px;
     border: 1px solid rgba(0, 0, 0, 0.36);
     box-sizing: border-box;
     border-radius: 4px;
-    margin-right: 26px;
     padding-left: 15px;
     padding-right: 15px;
     &:focus {
@@ -102,7 +116,7 @@ export const InputSmallLeft = styled.input`
 `;
 
 export const InputSmall = styled.input`
-    width: 211px;
+    width: 100%;
     height: 56px;
     border: 1px solid rgba(0, 0, 0, 0.36);
     box-sizing: border-box;
@@ -125,10 +139,16 @@ export const InputSmall = styled.input`
 export const OptionContainer = styled.div`
     display: flex;
     margin-bottom: 20px;
+    justify-content: space-between;
+    gap: 30px;
+
+    @media (max-width: 576px) {
+        flex-direction: column;
+    }
 `;
 
 export const Select = styled.select`
-    width: 448px;
+    width: 100%;
     height: 56px;
     padding-left: 15px;
     padding-right: 15px;
@@ -143,7 +163,7 @@ export const Option = styled.option`
 
 export const SmallSelect = styled.select`
     outline: none;
-    width: 211px;
+    width: 100%;
     height: 56px;
     border: 1px solid rgba(0, 0, 0, 0.36);
     padding-left: 15px;
@@ -153,8 +173,7 @@ export const SmallSelect = styled.select`
 export const SmallOption = styled.option``;
 
 export const FormLineWrap = styled.div`
-    width: 50%;
-    margin-right: 13px;
+    width: 100%;
 `;
 
 export const CheckBox = styled.input`
@@ -162,7 +181,7 @@ export const CheckBox = styled.input`
 `;
 
 export const SubmitButton = styled.button`
-    width: 448px;
+    width: 120px;
     height: 44px;
     background: #00d17d;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12),
@@ -182,6 +201,7 @@ export const ImageContainer = styled.div`
     position: absolute;
     margin-top: auto;
     right: 0;
+    z-index: -1;
     @media (max-width: 1200px) {
         display: none;
     }
