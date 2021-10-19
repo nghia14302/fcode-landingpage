@@ -17,7 +17,7 @@ import {
     FormWrap,
     Label,
     NameInput,
-    InputSmall,
+    InputFull,
     InputSmallLeft,
     OptionContainer,
     Select,
@@ -53,7 +53,7 @@ const Form = () => {
     };
     const handleSubmit = async (e) => {
         e.preventDefault();
-        if (submit.lname === '' || submit.id === '' || submit.fname === '' || submit.phone === '') {
+        if (submit.id === '' || submit.fname === '' || submit.phone === '') {
             setPopupSpec({ isShowing: true, type: 'missing' });
             return;
         }
@@ -65,7 +65,7 @@ const Form = () => {
             '/students',
             {
                 phone: submit.phone,
-                name: submit.lname + submit.fname,
+                name: submit.fname,
                 studentCode: submit.id,
                 major: submit.spec,
                 semester: submit.sem,
@@ -132,18 +132,12 @@ const Form = () => {
                     <FormWrap>
                         <Label>Tên</Label>
                         <NameInput>
-                            <InputSmallLeft
-                                type="text"
-                                name="lname"
-                                placeholder="Nhập tên của bạn"
-                                onChange={(e) => handleChange(e)}
-                            ></InputSmallLeft>
-                            <InputSmall
+                            <InputFull
                                 type="text"
                                 name="fname"
-                                placeholder="Nhập họ của bạn"
+                                placeholder="Nhập họ và tên đầy đủ của bạn"
                                 onChange={(e) => handleChange(e)}
-                            ></InputSmall>
+                            ></InputFull>
                         </NameInput>
                         <Label htmlFor="spec">Ngành học</Label>
                         <Select id="spec" name="spec" onChange={(e) => handleChange(e)}>

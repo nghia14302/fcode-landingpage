@@ -96,8 +96,8 @@ export const InputSmallLeft = styled.input`
     }
 `;
 
-export const InputSmall = styled.input`
-    width: 211px;
+export const InputFull = styled.input`
+    width: 100%;
     height: 56px;
     border: 1px solid rgba(0, 0, 0, 0.36);
     box-sizing: border-box;

@@ -4,6 +4,8 @@ import { useLocation, useHistory } from 'react-router-dom';
 
 import background from '../../assets/img/register/Frame.svg';
 import { get } from '../../utils/apiCaller';
+import Popup from '../form/popup';
+import { Block } from '../style';
 import RegisterButton from './button';
 import ProgressBar from './progress';
 import { RegisterContainer, RegisterContent, Title, Description, Background } from './style';
@@ -42,6 +44,7 @@ const Register = () => {
     const [step, setStep] = useState(() => localStorage || 1);
     const location = useLocation();
     const history = useHistory();
+    const [popupSpec, setPopupSpec] = useState({ isShowing: false, type: '', content: '' });
     const token = window.localStorage.getItem('token');
 
     const handleStep = async () => {
@@ -62,19 +65,32 @@ const Register = () => {
             window.localStorage.setItem('token', urlToken);
             history.push('/register');
         }
-    }, [ location ]);
+        if (urlState === 'false') {
+            setPopupSpec({
+                isShowing: true,
+                type: 'notConfirmed',
+                content: 'Hãy đăng nhập bằng mail FPT nhé!',
+            });
+        }
+    }, [location]);
 
     return (
         <RegisterContainer>
+            {popupSpec.isShowing ? (
+                <Popup
+                    type={popupSpec.type}
+                    content={popupSpec.content}
+                    close={() => setPopupSpec({ isShowing: false, type: '' })}
+                />
+            ) : null}
             <Background src={background}>
                 <RegisterContent>
                     <Title>
-                        ĐĂNG KÍ THAM GIA
-                        <span> F-Code</span>
+                        ĐĂNG KÍ THAM GIA <Block>F-Code</Block>
                     </Title>
                     <Description>
-                        Để tham gia thử thách trở thành thành viên của F-Code, trước hết các bạn tài
-                        tài khoản qua Gmail FPT
+                        Để tham gia thử thách trở thành thành viên của <Block>F-Code</Block>, trước
+                        hết các bạn tài tài khoản qua Gmail FPT
                     </Description>
                     <ProgressBar progress={step} data={progress} />
                     <RegisterButton step={step} />

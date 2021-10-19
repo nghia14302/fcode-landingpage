@@ -20,6 +20,7 @@ export const CardsContainer = styled.div`
     justify-content: center;
     align-items: center;
     max-width: 1064px;
+    z-index: 0;
     @media screen and (max-width: 1200px) {
         max-width: 600px;
     }

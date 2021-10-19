@@ -8,9 +8,12 @@ export const Content = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 4em;
+    padding: 0 4rem;
     margin: 0 auto;
     height: 100%;
+    @media screen and (max-width: 560px) {
+        padding: 0 1rem;
+    }
 `;
 // common components
 export const DescriptionContainer = styled.div`

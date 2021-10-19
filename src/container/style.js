@@ -5,6 +5,10 @@ export const LandingContainer = styled.div`
     min-width: 100vw;
     min-height: 100vh;
 `;
+export const Block = styled.span`
+    white-space: nowrap;
+`;
+
 export const NavLink = styled(Link)`
     text-decoration: none;
     color: #00d17d;

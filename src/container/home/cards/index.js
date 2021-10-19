@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Block } from '../../style';
 import { DescriptionContainer, Description, Title, Content } from '../style';
 import Items from './items';
 import { CardsContainer, Spirit } from './style';
@@ -32,7 +33,9 @@ const Cards = () => {
         <Spirit>
             <Content>
                 <DescriptionContainer>
-                    <Title data-aos="fade-up">Tinh Thần F-Code</Title>
+                    <Title data-aos="fade-up">
+                        Tinh Thần <Block>F-Code</Block>
+                    </Title>
                     <Description data-aos="fade-up">
                         Tinh thần của mỗi thành viên sẽ đóng vai trò rất quan trọng để xây dựng một
                         tập thể lớn mạnh
