@@ -73,7 +73,7 @@ const Register = () => {
                         <span> F-Code</span>
                     </Title>
                     <Description>
-                        Để trở thành thành viên đầu tiên của F-Code, trước hết các bạn phải đăng kí
+                        Để tham gia thử thách trở thành thành viên của F-Code, trước hết các bạn tài
                         tài khoản qua Gmail FPT
                     </Description>
                     <ProgressBar progress={step} data={progress} />

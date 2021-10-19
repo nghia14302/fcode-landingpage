@@ -42,7 +42,6 @@ const initialFormData = Object.freeze({
 const Form = () => {
     const [popupSpec, setPopupSpec] = useState({ isShowing: false, type: '', content: '' });
     const [submit, setSubmit] = useState(initialFormData);
-    const [response, setResponse] = useState();
     const history = useHistory();
     const token = window.localStorage.getItem('token');
     const handleChange = (e) => {
@@ -56,57 +55,60 @@ const Form = () => {
         e.preventDefault();
         if (submit.lname === '' || submit.id === '' || submit.fname === '' || submit.phone === '') {
             setPopupSpec({ isShowing: true, type: 'missing' });
-        } else if (!submit.confirm) {
-            setPopupSpec({ isShowing: true, type: 'notConfirmed' });
-        } else {
-            await put(
-                '/api/students',
-                {
-                    phone: submit.phone,
-                    name: submit.lname + submit.fname,
-                    studentCode: submit.id,
-                    major: submit.spec,
-                    semester: submit.sem,
-                },
-                {},
-                {
-                    Authorization: token,
-                }
-            ).then((res) => {
-                setResponse(res.data.status.message);
-                if (response === 'Invalid phone number!') {
-                    setPopupSpec({
-                        isShowing: true,
-                        type: 'notConfirmed',
-                        content: 'Số điện thoại không hợp lệ',
-                    });
-                }
-                if (response === 'Invalid name!') {
-                    setPopupSpec({
-                        isShowing: true,
-                        type: 'notConfirmed',
-                        content: 'Tên nhập vào không hợp lệ',
-                    });
-                }
-                if (response === 'Invalid student code!') {
-                    setPopupSpec({
-                        isShowing: true,
-                        type: 'notConfirmed',
-                        content: 'Mã số sinh viên không hợp lệ',
-                    });
-                }
-                if (response === 'Already registered!!') {
-                    setPopupSpec({
-                        isShowing: true,
-                        type: 'notConfirmed',
-                        content: 'Bạn đã đăng kí rồi',
-                    });
-                }
-                if (response === 'Registered successfully!') {
-                    setPopupSpec({ isShowing: true, type: 'success' });
-                }
-            });
+            return;
         }
+        if (!submit.confirm) {
+            setPopupSpec({ isShowing: true, type: 'notConfirmed' });
+            return;
+        }
+        const tmp = await put(
+            '/students',
+            {
+                phone: submit.phone,
+                name: submit.lname + submit.fname,
+                studentCode: submit.id,
+                major: submit.spec,
+                semester: submit.sem,
+            },
+            {},
+            {
+                Authorization: token,
+            }
+        ).then((res) => {
+            const response = res.data.status.message;
+            if (response === 'Invalid phone number!') {
+                return {
+                    isShowing: true,
+                    type: 'notConfirmed',
+                    content: 'Số điện thoại không hợp lệ',
+                };
+            }
+            if (response === 'Invalid name!') {
+                return {
+                    isShowing: true,
+                    type: 'notConfirmed',
+                    content: 'Tên nhập vào không hợp lệ',
+                };
+            }
+            if (response === 'Invalid student code!') {
+                return {
+                    isShowing: true,
+                    type: 'notConfirmed',
+                    content: 'Mã số sinh viên không hợp lệ',
+                };
+            }
+            if (response === 'Already registered!!') {
+                return {
+                    isShowing: true,
+                    type: 'notConfirmed',
+                    content: 'Bạn đã đăng kí rồi',
+                };
+            }
+            if (response === 'Registered successfully!') {
+                return { isShowing: true, type: 'success' };
+            }
+        });
+        setPopupSpec(tmp);
     };
     return (
         <SectionWrapper>
@@ -188,6 +190,14 @@ const Form = () => {
                                     <Option value="LV5">LV5</Option>
                                     <Option value="LV6">LV6</Option>
                                     <Option value="CN1">CN1</Option>
+                                    <Option value="CN1">CN2</Option>
+                                    <Option value="CN1">CN3</Option>
+                                    <Option value="CN1">CN4</Option>
+                                    <Option value="CN1">CN5</Option>
+                                    <Option value="CN1">CN6</Option>
+                                    <Option value="CN1">CN7</Option>
+                                    <Option value="CN1">CN8</Option>
+                                    <Option value="CN1">CN9</Option>
                                 </SmallSelect>
                             </FormLineWrap>
                         </OptionContainer>
@@ -208,7 +218,7 @@ const Form = () => {
                         ></CheckBox>
                         <Label htmlFor="confirm">Tôi đồng ý tham gia thử thách của CLB FCode</Label>
                     </FormWrap>
-                    <SubmitButton onClick={(e) => handleSubmit(e)}>ĐẮNG KÍ</SubmitButton>
+                    <SubmitButton onClick={(e) => handleSubmit(e)}>ĐĂNG KÍ</SubmitButton>
                 </FormContent>
                 <ImageContainer>
                     <FormImage src={Image} draggable="false"></FormImage>

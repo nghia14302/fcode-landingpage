@@ -34,7 +34,12 @@ const SText = styled.div`
         width: 100%;
     }
 `;
-
+const Copyright = styled.div`
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+`;
 const XSText = styled.div`
     font-family: Roboto;
     font-size: 14px;
@@ -52,4 +57,4 @@ const XSText = styled.div`
     }
 `;
 
-export { StyledFooter, LText, SText, XSText };
+export { StyledFooter, LText, SText, XSText, Copyright };
