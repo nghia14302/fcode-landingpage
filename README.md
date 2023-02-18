@@ -32,7 +32,7 @@ Run install and start
 
 Then, enjoy yourself!
 
-## About US
+## About us
 We come from a club call F-Code from FPT University. Total 5 members in the project:
  - Designer: Nguyễn Hải Đăng
  - Back-end: Ngô Việt Tiến
