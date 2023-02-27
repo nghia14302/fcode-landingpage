@@ -9,9 +9,8 @@ This is the front-end pages that we made
 https://user-images.githubusercontent.com/22288298/219872987-39115751-5687-421c-8b60-428e1f0baa99.mp4
 
 ## Installation 
-First, you need to install yarn from the [link](https://yarnpkg.com/)
 
-Pulling repository 
+Pull repository 
 
 ```
  git clone https://github.com/markhipz/fcode-landingpage
