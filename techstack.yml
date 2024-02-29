@@ -2,7 +2,7 @@ repo_name: nghianguyent/fcode-landingpage
 report_id: 335bcc54e42b1662d3214ca85323f56e
 version: 0.1
 repo_type: Public
-timestamp: '2024-01-27T14:02:50+00:00'
+timestamp: '2024-02-29T19:38:18+00:00'
 requested_by: nghianguyent
 provider: github
 branch: main
@@ -72,7 +72,7 @@ tools:
   detection_source_url: https://github.com/nghianguyent/fcode-landingpage
   detection_source: Repo Metadata
 - name: Prettier
-  description: 'Prettier is an opinionated code formatter. '
+  description: Prettier is an opinionated code formatter.
   website_url: https://prettier.io/
   version: 2.4.1
   license: MIT
